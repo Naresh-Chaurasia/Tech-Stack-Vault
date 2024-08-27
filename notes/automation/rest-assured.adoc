@@ -1,0 +1,10 @@
+= Rest Assured - Automation Architect
+:toc: right
+:toclevels: 5
+:sectnums: 5
+
+
+== References
+
+* https://www.javadoc.io/static/io.rest-assured/rest-assured/5.5.0/index.html?io/restassured/RestAssured.html
+* https://www.javadoc.io/static/io.rest-assured/rest-assured/5.5.0/io/restassured/response/ResponseBody.html
