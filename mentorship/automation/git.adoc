@@ -1,0 +1,72 @@
+= Git and GitHub
+:toc: right
+:toclevels: 5
+:sectnums: 5
+
+
+== SSH Key Generation
+
+To generate and add an SSH key for GitHub on a Windows machine, follow these steps:
+
+1. **Check for Existing SSH Keys**:
+- Open Git Bash and run:
+```bash
+ls -al ~/.ssh
+```
+- If you see files like `id_rsa.pub` or `id_ed25519.pub`, you already have an SSH key.
+
+2. **Generate a New SSH Key**:
+- In Git Bash, enter the following command (replace `your_email@example.com` with your GitHub email):
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+- If your system doesn’t support `ed25519`, use:
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+3. **Save the SSH Key**:
+- You’ll be prompted to save the key. Press `Enter` to accept the default location (`/c/Users/YourName/.ssh/id_ed25519`).
+
+4. **Set a Passphrase**:
+- Optionally, you can enter a passphrase for added security or just press `Enter` for no passphrase.
+
+5. **Add SSH Key to the SSH Agent**:
+- Start the SSH agent:
+```bash
+eval "$(ssh-agent -s)"
+```
+- Add your SSH key:
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+6. **Copy the SSH Key to Your Clipboard**:
+- Use this command to copy your SSH key:
+```bash
+clip < ~/.ssh/id_ed25519.pub
+```
+- If you used RSA, the command would be:
+```bash
+clip < ~/.ssh/id_rsa.pub
+```
+
+7. **Add the SSH Key to Your GitHub Account**:
+- Go to your GitHub account [SSH and GPG keys settings](https://github.com/settings/keys).
+- Click on **New SSH key**, give it a title, and paste your key in the "Key" field.
+
+8. **Test Your SSH Connection**:
+- Run the following command to test your connection:
+```bash
+ssh -T git@github.com
+```
+- If successful, you should see a message like:
+```
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+You’re now ready to use SSH with GitHub on Windows!
+
+== References
+
+https://www.youtube.com/watch?v=a-zX_qc2S-M[GitHub SSH]

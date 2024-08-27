@@ -1,0 +1,152 @@
+= Techno Manager
+:toc: right
+:toclevels: 5
+:sectnums:
+
+image::img/tech-m.png[]
+
+### Intended Audience
+
+This course aims to equip managers with the knowledge to make informed decisions, facilitate better communication with technical teams, and understand the strategic importance of various technologies in driving business success.
+
+- Non-technical Managers and Team Leads
+
+- Project Managers
+
+- Product Managers
+
+- Business Analysts
+
+- IT Executives
+
+- Technical Recruiters
+
+- Any manager or leader in a technology-driven organization looking to gain a high-level understanding of modern software development and deployment practices.
+
+
+
+### Learning Objectives
+
+*Why it is required to learn a topic?*
+
+- Understand the fundamental concepts and strategic importance of modern software development and deployment technologies.
+
+- Gain a high-level understanding of version control and collaboration tools like GitHub.
+
+- Learn the business implications and applications of ChatGPT and natural language processing technologies.
+
+- Understand the basics of relational and NoSQL databases and their strategic use cases.
+
+- Grasp the concepts and business benefits of containerization with Docker and orchestration with Kubernetes.
+
+- Get acquainted with the Spring Framework and its role in enterprise application development.
+
+- Learn the principles of managing infrastructure through code with Infrastructure as Code (IaC) tools.
+
+- Understand the Security Architecture.
+
+- Gain insights into AWS Cloud services and their strategic benefits.
+- Comprehend the principles of DevOps and its role in enhancing collaboration and efficiency.
+
+- Understand the design and benefits of APIs and microservices architectures.
+
+- Learn about GraphQL and its advantages in data querying.
+
+- Get an overview of NodeJS and its applications in building scalable server-side applications.
+
+### Learning Outcomes
+
+*What One Will Be Able to Do After Completing the Course?*
+
+Upon completing this course, participants will be able to effectively manage and oversee software development projects by understanding the essentials of GitHub for version control and collaboration, and leveraging ChatGPT for innovative AI-driven solutions. 
+
+They will be proficient in utilizing SQL and relational databases for efficient data management and NoSQL databases for handling diverse data types. 
+
+Participants will be able to implement and manage Docker containers for consistent application deployment, and orchestrate containerized applications using Kubernetes. 
+
+They will gain the ability to develop robust Java applications with the Spring Framework and Spring Boot, and manage infrastructure as code for automation and consistency. 
+
+With a strong grasp of security architecture, they will design and implement effective security measures. 
+
+They will leverage AWS Cloud services for scalable and cost-effective solutions, and apply DevOps practices to enhance collaboration and continuous delivery. 
+
+Participants will be adept in designing APIs and microservices for modular and scalable applications, using GraphQL to optimize data fetching, and developing high-performance server-side applications with Node.js. 
+
+Overall, they will possess the knowledge to make informed decisions, communicate effectively with technical teams, and drive technological innovations within their organizations.
+
+
+### Topics Overview
+
+#### GitHub
+
+   - **Overview**: GitHub is a web-based platform for version control and collaboration, allowing teams to work on projects simultaneously.
+   - **Key Concepts**: Repositories, Branches, Commits, Pull Requests, Issues, Git Workflows.
+
+#### ChatGPT
+
+   - **Overview**: ChatGPT is a state-of-the-art language model developed by OpenAI, capable of generating human-like text based on the input it receives.
+   - **Key Concepts**: Natural Language Processing (NLP), Use Cases (customer support, content generation), Ethical Considerations.
+
+#### SQL / Relational Database
+
+   - **Overview**: SQL (Structured Query Language) is used to manage and manipulate relational databases.
+   - **Key Concepts**: Tables, Queries, Joins, Transactions, Normalization.
+
+#### NoSQL
+
+   - **Overview**: NoSQL databases are designed for unstructured data and provide flexible schemas for data storage.
+   - **Key Concepts**: Key-Value Stores, Document Stores, Scalability, Use Cases.
+
+#### Docker Containers
+
+   - **Overview**: Docker is a platform that allows developers to automate the deployment of applications inside lightweight, portable containers.
+   - **Key Concepts**: Containers, Images, Benefits of Containerization.
+
+#### Kubernetes
+
+   - **Overview**: Kubernetes is an open-source platform for automating the deployment, scaling, and operation of containerized applications.
+   - **Key Concepts**: Clusters, Services, Scalability, Load Balancing.
+
+#### Spring Framework
+
+   - **Overview**: The Spring Framework is a comprehensive programming and configuration model for Java-based enterprise applications.
+   - **Key Concepts**: Dependency Injection, Spring Boot, REST APIs.
+
+#### Infrastructure as Code (IaC)
+
+   - **Overview**: IaC is the process of managing and provisioning computing infrastructure through machine-readable configuration files.
+   - **Key Concepts**: Terraform, Automation, Version Control.
+
+#### Security Architecture
+
+   - **Overview**: Security architecture involves the design and implementation of security controls and measures to protect systems and data.
+   - **Key Concepts**: Security principles and best practices, Threat modeling and risk assessment, Identity and access management.
+
+
+#### AWS Cloud
+
+    - **Overview**: Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform, offering over 200 fully-featured services.
+    - **Key Concepts**: Key Services (EC2, S3, RDS), Security, Cost Management.
+
+#### DevOps
+
+    - **Overview**: DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle and provide continuous delivery.
+    - **Key Concepts**: Continuous Integration (CI), Continuous Deployment (CD), Collaboration.
+
+#### API & MicroServices
+
+    - **Overview**: APIs (Application Programming Interfaces) allow different software applications to communicate, while microservices are a way of designing software systems as independently deployable services.
+    - **Key Concepts**: REST, Service Discovery, Scalability, Resilience.
+
+#### GraphQL
+
+    - **Overview**: GraphQL is a query language for APIs that allows clients to request exactly the data they need.
+    - **Key Concepts**: Schemas, Queries, Real-Time Data with Subscriptions.
+
+#### NodeJS
+
+    - **Overview**: Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side scripting.
+    - **Key Concepts**: Non-blocking I/O, Event-Driven Architecture, Express.js.
+
+
+

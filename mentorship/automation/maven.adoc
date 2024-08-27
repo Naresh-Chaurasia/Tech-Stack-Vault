@@ -1,0 +1,221 @@
+= Maven - Automation Architect
+:toc: right
+:toclevels: 5
+:sectnums: 5
+
+## 1. Introduction to Maven
+**What is Maven?**
+- Maven is a build automation tool primarily used for Java projects. It helps manage project dependencies, compile code, run tests, and package applications.
+
+**Benefits of Using Maven**
+- Simplifies the build process
+- Manages dependencies efficiently
+- Provides a standardized project structure
+- Integrates with various IDEs
+
+## 2. Maven Installation
+**Prerequisites**
+- Java Development Kit (JDK) installed
+
+**Steps to Install Maven**
+1. Download Maven from the [official website](https://maven.apache.org/download.cgi).
+2. Extract the downloaded archive.
+3. Add the `bin` directory of the extracted folder to the system's `PATH` environment variable.
+4. Verify the installation by running `mvn -v` in the command line.
+
+## 3. Maven Project Structure
+**Standard Directory Layout**
+```
+my-app
+|-- src
+|   |-- main
+|   |   `-- java
+|   |       `-- com
+|   |           `-- mycompany
+|   |               `-- app
+|   |                   `-- App.java
+|   `-- test
+|       `-- java
+|           `-- com
+|               `-- mycompany
+|                   `-- app
+|                       `-- AppTest.java
+|-- pom.xml
+```
+
+## 4. POM File
+**What is a POM File?**
+- The Project Object Model (POM) file (`pom.xml`) is the fundamental unit of work in Maven. It contains information about the project and configuration details used by Maven to build the project.
+
+**Basic Structure of a POM File**
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mycompany.app</groupId>
+    <artifactId>my-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <!-- Dependencies go here -->
+    </dependencies>
+</project>
+```
+
+## 5. Dependencies
+**Adding Dependencies**
+- Dependencies are external libraries required by the project. They are specified in the `<dependencies>` section of the POM file.
+
+**Example Dependency**
+```xml
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+```
+
+## 6. Build Lifecycle
+**Phases of the Build Lifecycle**
+- Validate
+- Compile
+- Test
+- Package
+- Verify
+- Install
+- Deploy
+
+```sh
+mvn clean install
+```
+
+## 7. Plugins
+**What are Plugins?**
+- Plugins are used to perform specific tasks such as compiling code, running tests, packaging, and deploying.
+
+**Commonly Used Plugins**
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
+## 8. Example Maven Project
+**Creating a Simple Maven Project**
+```sh
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+```
+
+**Adding Dependencies**
+- Add the following dependency to the `pom.xml` file:
+```xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.12.0</version>
+</dependency>
+```
+
+**Building the Project**
+```sh
+mvn clean install
+```
+
+### Example Maven Project Structure and Files
+
+**Project Structure:**
+```
+my-app
+|-- src
+|   |-- main
+|   |   `-- java
+|   |       `-- com
+|   |           `-- mycompany
+|   |               `-- app
+|   |                   `-- App.java
+|   `-- test
+|       `-- java
+|           `-- com
+|               `-- mycompany
+|                   `-- app
+|                       `-- AppTest.java
+|-- pom.xml
+```
+
+**App.java:**
+```java
+package com.mycompany.app;
+
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+**AppTest.java:**
+```java
+package com.mycompany.app;
+
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
+public class AppTest {
+    @Test
+    public void testApp() {
+        assertTrue(true);
+    }
+}
+```
+
+**pom.xml:**
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mycompany.app</groupId>
+    <artifactId>my-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
+
+This structure and these examples should provide a comprehensive introduction to Maven, covering its key features and demonstrating its usage through a simple project.

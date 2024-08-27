@@ -1,0 +1,191 @@
+= Spring Boot Microservices
+:toc: right
+:toclevels: 5
+:sectnums
+
+
+== Intended Outcome of the Course
+
+Upon completing this course, participants will gain a comprehensive understanding of Spring Boot and microservices architecture. They will be proficient in designing, developing, and deploying scalable microservices using Spring Boot and related Spring Cloud technologies. Participants will:
+
+* Build RESTful APIs and microservices from scratch, incorporating best practices for modular and maintainable code.
+* Develop and secure microservices using Spring Boot, Spring Security, and JWT for authentication and authorization.
+* Implement service discovery, centralized configuration, load balancing, and API gateway patterns to enhance microservice communication and resilience.
+* Containerize microservices using Docker and manage deployments using Kubernetes for scalable and fault-tolerant systems.
+* Gain hands-on experience with monitoring, logging, and distributed tracing for production-ready microservices.
+* Work on a capstone project that integrates the learned concepts into a real-world e-commerce application, reinforcing both technical skills and project-based learning.
+
+By the end of the course, participants will be equipped to design and implement robust microservice solutions and will have the confidence to apply these skills in enterprise-level projects.
+
+== Spring Boot
+
+=== Introduction to Spring Boot ===
+
+* *Overview of Spring Framework*
+- Understand the core concepts of dependency injection and inversion of control (IoC).
+- Learn the evolution from Spring Framework to Spring Boot and its purpose.
+
+* *Introduction to Spring Boot*
+- Explore Spring Boot’s core features and its advantages in simplifying development.
+- Understand how Spring Boot auto-configuration works to reduce boilerplate code.
+
+* *Features and Benefits of Spring Boot*
+- Discuss built-in tools like Actuator, DevTools, and Spring Boot CLI.
+- Explore dependency management with Spring Boot starters.
+
+* *Setting Up a Spring Boot Project*
+- Learn how to create a Spring Boot project using Spring Initializr and IDEs like IntelliJ or Eclipse.
+- Configure Maven or Gradle build tools to manage dependencies.
+
+* *Creating a Simple Spring Boot Application*
+- Develop a “Hello World” application to understand Spring Boot’s development process.
+- Run the application and view the embedded Tomcat server in action.
+
+* *Spring Boot Annotations and Auto-Configuration*
+- Explore key Spring Boot annotations like `@SpringBootApplication`, `@RestController`, `@RequestMapping`.
+- Learn how Spring Boot auto-configures components like JPA and DataSource without manual configuration.
+
+=== Building RESTful Web Services with Spring Boot ===
+* *Understanding RESTful Services*
+- Learn REST principles such as statelessness, resource representation, and URIs.
+- Compare RESTful APIs with SOAP and understand their advantages.
+
+* *Developing RESTful Endpoints with Spring Boot*
+- Create CRUD operations using Spring Boot and expose them as RESTful endpoints.
+- Implement `@GetMapping`, `@PostMapping`, `@PutMapping`, and `@DeleteMapping` annotations.
+
+* *Request Handling (GET, POST, PUT, DELETE)*
+- Handle HTTP requests with parameters, headers, and bodies.
+- Use `@RequestParam`, `@RequestBody`, and `@PathVariable` to pass data.
+
+* *Working with Path Variables and Query Parameters*
+- Understand when to use path variables for dynamic URLs.
+- Utilize query parameters to filter and search resources.
+
+* *Handling Exceptions in REST APIs*
+- Implement global exception handling using `@ControllerAdvice` and `@ExceptionHandler`.
+- Customize error responses with meaningful messages and HTTP status codes.
+
+* *Content Negotiation (JSON/XML)*
+- Configure Spring Boot to return responses in JSON, XML, or other formats.
+- Learn how to use the `Accept` header for content negotiation.
+
+* *HATEOAS and Versioning in REST APIs*
+- Add links to REST responses for discoverability and navigation (HATEOAS).
+- Explore versioning strategies for APIs such as URI versioning, header versioning, and parameter versioning.
+
+=== Data Access with Spring Boot ===
+* *Introduction to Spring Data JPA*
+- Learn about Object-Relational Mapping (ORM) and how JPA simplifies database interactions.
+- Understand how Spring Data JPA integrates with Hibernate as the default JPA provider.
+
+* *Configuring Data Sources*
+- Set up database configurations (H2, MySQL, PostgreSQL) in `application.properties`.
+- Learn the difference between embedded and external databases for development and production.
+
+* *Creating Entities and Repositories*
+- Define entity classes with JPA annotations like `@Entity`, `@Table`, and `@Id`.
+- Implement CRUD operations using Spring Data JPA’s `CrudRepository` and `JpaRepository`.
+
+* *Query Methods and JPQL*
+- Use query methods with Spring Data JPA to perform complex queries without SQL.
+- Learn JPQL (Java Persistence Query Language) for writing custom queries.
+
+
+== Microservices
+
+=== Microservices Architecture ===
+* *Introduction to Microservices*
+- Understand the principles and benefits of microservices architecture.
+- Discuss challenges like data consistency, communication, and deployment in microservices.
+
+* *Monolithic vs. Microservices Architecture*
+- Compare monolithic and microservices-based systems in terms of scalability, maintainability, and agility.
+- Learn when to migrate from monolithic to microservices.
+
+* *Principles of Microservices Design*
+- Explore microservices principles like single responsibility, decentralized governance, and resilience.
+- Discuss design patterns like API Gateway, Circuit Breaker, and Service Registry.
+
+* *Domain-Driven Design (DDD) and Bounded Contexts*
+- Break down large domains into bounded contexts and microservices.
+- Implement entities, aggregates, and repositories within a microservice using DDD.
+
+* *Service Discovery and Registration*
+- Use Eureka for service registration and discovery in a microservices environment.
+- Explore how Spring Cloud handles service instances and load balancing.
+
+* *Introduction to Netflix OSS (Eureka, Zuul)*
+- Understand the role of Netflix OSS components in microservices architecture.
+- Implement API Gateway functionality using Zuul for routing and filtering.
+
+=== Building Microservices with Spring Boot ===
+* *Developing Independent Microservices*
+- Create microservices that operate independently with isolated databases and data models.
+- Follow best practices for decoupled deployment and release cycles.
+
+* *Communication Between Microservices (REST, Feign Client)*
+- Use Feign Client for declarative REST clients and seamless inter-service communication.
+- Understand synchronous and asynchronous communication patterns.
+
+* *Configuring Spring Cloud Config Server*
+- Centralize configuration management using Spring Cloud Config Server.
+- Implement configuration versioning and profile-based settings.
+
+* *API Gateway and Routing with Spring Cloud Gateway/Zuul*
+- Implement API Gateway patterns for routing, filtering, and security.
+- Compare Zuul and Spring Cloud Gateway for dynamic routing solutions.
+
+* *Implementing Circuit Breaker with Resilience4j/Hystrix*
+- Understand the Circuit Breaker pattern for handling service failures and timeouts.
+- Implement fault tolerance using Resilience4j and fallback mechanisms.
+
+* *Load Balancing with Spring Cloud LoadBalancer*
+- Set up client-side load balancing with Spring Cloud LoadBalancer.
+- Learn how to distribute traffic across service instances.
+
+=== Microservices Deployment and Monitoring ===
+* *Packaging Microservices with Docker*
+- Containerize Spring Boot microservices using Docker for consistent deployments.
+- Use Docker Compose for multi-container applications and environment setup.
+
+* *Introduction to Kubernetes and Microservices Deployment*
+- Deploy microservices on Kubernetes clusters for scalability and resilience.
+- Understand the basics of Pods, Deployments, and Services in Kubernetes.
+
+* *Centralized Logging and Monitoring (ELK Stack, Prometheus, Grafana)*
+- Set up centralized logging with the ELK stack (Elasticsearch, Logstash, Kibana).
+- Monitor application health and performance using Prometheus and Grafana.
+
+* *Distributed Tracing with Spring Cloud Sleuth and Zipkin*
+- Implement distributed tracing to monitor requests across microservices.
+- Visualize tracing data and latency metrics using Zipkin.
+
+* *CI/CD Pipeline for Microservices (Jenkins, GitLab CI/CD)*
+- Set up a continuous integration/continuous deployment pipeline for automated testing and deployment.
+- Integrate Jenkins or GitLab CI/CD with Docker and Kubernetes.
+
+== Capstone Project
+
+* *Project Description*
+- Develop a microservices-based e-commerce application with product, order, and payment services.
+- Use Spring Boot and Spring Cloud components to build scalable microservices.
+
+* *Project Requirements*
+- Implement microservices with independent data stores and domain logic.
+- Secure microservices with JWT.
+
+* *Service Discovery and Communication*
+- Implement service registration and discovery using Eureka.
+- Use Feign Client for inter-service REST communication.
+
+* *API Gateway and Centralized Configuration*
+- Set up Spring Cloud Gateway for routing and Spring Cloud Config for centralized configuration.
+- Use Hystrix or Resilience4j for fault tolerance and circuit-breaking.
+
+* *Deployment and Monitoring*
+- Containerize microservices using Docker and deploy them on Kubernetes.
+- Implement centralized logging, monitoring, and distributed tracing.
+
+* *Project Deliverables*
+- Source code, deployment scripts, Docker Compose files, and detailed documentation.

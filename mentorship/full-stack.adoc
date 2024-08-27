@@ -1,0 +1,196 @@
+= Angular Full Stack
+:toc: right
+:toclevels: 5
+:sectnums
+
+
+== Full Stack Development
+
+* Overview of Frontend, Backend, and Databases
+* Understanding the Role of Full Stack Developer
+* Overview of Technologies Used: Angular, Spring Boot, Core Java, SQL/NoSQL Databases
+
+
+== Core Java Programming
+
+* *Introduction to Core Java*
+** Basic Syntax and Data Types
+** Variables and Constants
+** Primitive Data Types (int, float, double, char, etc.)
+** Wrapper Classes (Integer, Double, etc.)
+** Type Casting (Implicit and Explicit)
+
+* *Object-Oriented Programming Concepts*
+** Classes and Objects
+** Constructors and Initialization Blocks
+** Inheritance (superclass, subclass, method overriding)
+** Polymorphism (method overloading, dynamic method dispatch)
+** Encapsulation (access modifiers, getter and setter methods)
+** Abstraction (abstract classes, interfaces)
+
+* *Exception Handling*
+** Types of Exceptions (Checked vs. Unchecked)
+** Try, Catch, Finally Blocks
+** Throw and Throws Keywords
+** Custom Exception Classes
+** Exception Hierarchy
+
+* *Working with Collections*
+** List Interface
+** ArrayList (creation, manipulation, common methods)
+** LinkedList (creation, manipulation, common methods)
+** List Iteration (for-each loop, iterator)
+** Set Interface
+** HashSet (creation, manipulation, common methods)
+** TreeSet (creation, manipulation, common methods)
+** Set Iteration (for-each loop, iterator)
+** Map Interface
+** HashMap (creation, manipulation, common methods)
+** TreeMap (creation, manipulation, common methods)
+** LinkedHashMap (creation, manipulation, common methods)
+** Map Iteration (entrySet, keySet, values)
+** Common Operations
+** Sorting Collections (using Comparable, Comparator)
+** Filtering and Transforming Collections (using streams)
+** Synchronizing Collections
+
+* *Java I/O and File Handling*
+** File Operations
+** File Class (creating, deleting, checking existence)
+** Reading from Files (FileReader, BufferedReader)
+** Writing to Files (FileWriter, BufferedWriter)
+** Handling Binary Data (FileInputStream, FileOutputStream)
+** Streams and Readers/Writers
+** Byte Streams (InputStream, OutputStream)
+** Character Streams (Reader, Writer)
+** Serialization and Deserialization (ObjectInputStream, ObjectOutputStream)
+
+* *Multithreading and Concurrency*
+** Introduction to Threads
+** Creating Threads (extending Thread class, implementing Runnable interface)
+** Thread Life Cycle (new, runnable, blocked, waiting, terminated)
+** Thread States and Scheduling
+** Synchronization and Concurrency Utilities
+** Synchronizing Threads (synchronized keyword, locks)
+** Thread Communication (wait, notify, notifyAll)
+
+* *Java 8+ Features (Optional)*
+** Lambda Expressions
+** Syntax and Usage
+** Functional Interfaces
+** Using Lambda Expressions with Collections
+** Streams API
+** Introduction to Streams
+** Stream Operations (filter, map, reduce, collect)
+** Parallel Streams
+
+
+== Angular Frontend Development
+
+* *Introduction to Angular*
+** Setting Up Angular Development Environment
+** Overview of Angular CLI
+** Understanding Angular Project Structure
+
+* *TypeScript Essentials*
+** Introduction to TypeScript
+** Data Types, Functions, and Classes
+** Modules and Interfaces
+
+* *Angular Components and Modules*
+** Creating and Using Components
+** Component Communication (Input, Output)
+** Organizing Modules
+
+* *Angular Templates and Data Binding*
+** Interpolation and Property Binding
+** Event Binding and Two-Way Data Binding
+** Working with Directives (ngIf, ngFor)
+
+* *Angular Forms*
+** Template-Driven Forms
+** Reactive Forms
+** Form Validation and Error Handling
+
+* *Angular Services and Dependency Injection*
+** Creating and Injecting Services
+** Understanding Dependency Injection
+** Managing Data with Services
+
+* *Angular Routing and Navigation*
+** Setting Up Routes and Nested Routes
+** Route Guards for Authentication and Authorization
+** Lazy Loading and Module Preloading
+
+* *Consuming RESTful APIs*
+** Introduction to HTTP Client in Angular
+** Making GET, POST, PUT, DELETE Requests
+** Handling API Responses and Errors
+
+* *State Management in Angular*
+** Introduction to State Management Concepts
+** Managing State with Services
+** Introduction to NgRx (Optional)
+
+== Maven Build Tool
+
+* Introduction to Maven
+* Maven Installation
+* Maven Project Structure
+* POM File
+* Dependencies
+* Build Lifecycle
+* Plugins
+* Example Maven Project
+* Example Maven Project Structure and Files
+
+== NPM Package Manager
+
+* Node.js provides the npm (Node Package Manager) for installing and managing Angular CLI, project dependencies, and third-party libraries.
+
+* npm to manage Angular packages, ensuring consistent versions and smooth package updates for the full stack development process.
+
+* Node.js and npm enable running Angular-related commands, such as `ng serve` and `ng build`.
+
+== Spring Boot Framework
+
+* *Introduction to Spring Boot*
+** Understanding Spring Boot and its Features
+** Setting Up a Spring Boot Project
+** Overview of Spring Boot Starter Projects
+
+* *Building RESTful APIs with Spring Boot*
+** Creating RESTful Controllers
+** Handling HTTP Requests and Responses
+** Exception Handling and Validation
+
+* *Working with Databases*
+** Introduction to Spring Data JPA
+** CRUD Operations with Relational Databases (Using JPA/Hibernate)
+** Connecting to NoSQL Databases (Using Spring Data MongoDB)
+
+* *User Authentication and Authorization*
+** Implementing JWT Authentication
+** Role-Based Access Control
+** Securing API Endpoints
+
+
+== Integrating Angular with Spring Boot
+
+* Connecting Angular with Spring Boot APIs
+* Handling CORS and HTTP Interceptors
+* User Registration and Authentication Flow
+* CRUD Operations for a Sample Application (e.g., Blog, ToDo App)
+
+== Deployment and DevOps
+
+* Preparing Frontend and Backend for Deployment
+* Introduction to Docker (Optional)
+* Continuous Integration and Continuous Deployment (CI/CD) Overview
+
+== Capstone Project
+
+* Full-Stack Application Development
+** Planning and Designing the Application
+** Implementing Frontend and Backend
+** Testing, Debugging, and Deployment

@@ -1,0 +1,238 @@
+= 6 Months Mentorship Program - Automation Architect
+:toc: right
+:toclevels:
+:sectnums:
+
+== Core Java Programming
+
+link:automation-architect/core-java.adoc[Core Java,window=_blank]
+
+* *Java Installation*
+- Environment Variables
+- Path and CLASSPATH
+
+* *Basic Java Concepts*
+
+- *Java Basics*
+- Introduction to Java
+- Setting up Java Development Environment
+- Writing your first Java program
+
+- *Data Types and Variables*
+- Primitive Data Types
+- Reference Data Types
+- Variables and Constants
+
+* *Control Flow Statements*
+- *Conditional Statements*
+- If-else Statements
+- Switch Statements
+- *Looping Statements*
+- For Loop
+- While Loop
+- Do-While Loop
+
+* *Object-Oriented Programming (OOP)*
+- *Classes and Objects*
+- Defining a Class
+- Creating Objects
+- Constructors
+- *Inheritance*
+- Superclass and Subclass
+- Method Overriding
+- *Polymorphism*
+- Method Overloading
+- Dynamic Method Dispatch
+- *Encapsulation*
+- Access Modifiers
+- Getters and Setters
+- *Abstraction*
+- Abstract Classes
+- Interfaces
+
+* *Exception Handling*
+- Types of Exceptions
+- Checked Exceptions
+- Unchecked Exceptions
+- Try-Catch Block
+- Throw and Throws
+- Finally Block
+
+* *Collections Framework*
+- *List*
+- ArrayList
+- LinkedList
+- *Set*
+- HashSet
+- LinkedHashSet
+- TreeSet
+- *Map*
+- HashMap
+- LinkedHashMap
+- TreeMap
+
+* *Java Input and Output (I/O)*
+- File Handling
+- File Class
+- Reading and Writing Files
+- Streams
+- Byte Streams
+- Character Streams
+
+* *Multithreading*
+- Creating Threads
+- Extending Thread Class
+- Implementing Runnable Interface
+- Thread Life Cycle
+- Synchronization
+- Inter-Thread Communication
+
+* *Java Utility Classes*
+- *String Handling*
+- String Class
+- StringBuilder and StringBuffer
+- Wrapper Classes
+- Autoboxing and Unboxing
+
+
+* *Java 8 Features (#Overview#)*
+- Lambda Expressions
+- Streams API
+- Functional Interfaces
+- Default and Static Methods in Interfaces
+
+
+== TestNG/JUnit Framework
+
+== SQL / MySQL Database
+
+== Basic Understanding of Maven
+
+link:automation-architect/maven.adoc[Maven,window=_blank]
+
+Sure! When introducing Maven, you should cover the following key points:
+
+1. *Introduction to Maven*
+   - What is Maven?
+   - Benefits of using Maven
+
+2. *Maven Installation*
+   - Prerequisites
+   - Steps to install Maven
+
+3. *Maven Project Structure*
+   - Standard directory layout
+
+4. *POM File*
+   - What is a POM file?
+   - Basic structure of a POM file
+
+5. *Dependencies*
+   - Adding dependencies
+   - Understanding the dependency scope
+
+6. *Build Lifecycle*
+   - Phases of the build lifecycle
+
+7. *Plugins*
+   - What are plugins?
+   - Commonly used plugins
+
+8. *Example Maven Project*
+   - Creating a simple Maven project
+   - Adding dependencies
+   - Building the project
+
+== Selenium Automation with Java
+
+== Introduction to Web Services and REST API
+
+link:web-services.adoc[Web Services,window=_blank]
+
+*Introduction*
+
+- What are Web Services?
+- Types of Web Services
+
+*Basics of REST API*
+
+- Definition of REST
+- REST vs. SOAP
+
+*Components of a RESTful Service*
+
+* Resources
+** URIs (Uniform Resource Identifiers)
+
+* HTTP Methods
+** GET
+** POST
+** PUT
+** DELETE
+** PATCH
+
+* Status Codes
+** 1xx (Informational)
+** 2xx (Success)
+** 3xx (Redirection)
+** 4xx (Client Error)
+** 5xx (Server Error)
+
+*Consuming RESTful APIs*
+
+- Tools for Testing APIs (Postman, curl)
+- Making Requests (with Python, JavaScript)
+- Parsing Responses
+
+*Error Handling*
+
+- Client-Side Errors
+- Server-Side Errors
+- Error Messages and Codes
+
+
+*Practical Examples*
+
+- Building a Simple REST API with Flask (Python)
+- Building a Simple REST API with Express (JavaScript/Node.js)
+
+
+
+== API Automation using REST Assured
+
+link:automation-architect/rest-assured.adoc[Rest Assured,window=_blank]
+
+== DevOps Concepts
+
+== Linux Basics
+
+== GitHub Basics - Code Checkin, Code Checkout, Merging
+
+== Jenkin Introduction
+
+== Docker Container Introduction
+
+== Basics of Microservices Architecture
+
+== Basics of  Amazon AWS Cloud Computing
+
+== Project 1 - Java Selenium Automation
+
+== Project 2 - Java Selenium Automation
+
+== Project 3 - API Automation using REST Assured
+
+== Project 4 - API Automation using REST Assured
+
+== Project 5 - DevOps Pipeline using Jenkins
+
+== Mock Interviews
+
+== How to use ChatGPT for coding, debugging and automation
+
+== IDE
+
+* Visual Studio Code
+* IntelliJ
+* Pluggins for Editors
+

@@ -1,0 +1,285 @@
+= Java Selenium - Automation Engineer
+:toc: right
+:toclevels:
+:sectnums:
+
+== Core Java Programming
+
+link:automation-architect/core-java.adoc[Core Java,window=_blank]
+
+* *Java Installation*
+- Environment Variables
+- Path and CLASSPATH
+
+* *Basic Java Concepts*
+
+- *Java Basics*
+- Introduction to Java
+- Setting up Java Development Environment
+- Writing your first Java program
+
+- *Data Types and Variables*
+- Primitive Data Types
+- Reference Data Types
+- Variables and Constants
+
+* *Control Flow Statements*
+- *Conditional Statements*
+- If-else Statements
+- Switch Statements
+- *Looping Statements*
+- For Loop
+- While Loop
+- Do-While Loop
+
+* *Object-Oriented Programming (OOP)*
+- *Classes and Objects*
+- Defining a Class
+- Creating Objects
+- Constructors
+- *Inheritance*
+- Superclass and Subclass
+- Method Overriding
+- *Polymorphism*
+- Method Overloading
+- Dynamic Method Dispatch
+- *Encapsulation*
+- Access Modifiers
+- Getters and Setters
+- *Abstraction*
+- Abstract Classes
+- Interfaces
+
+* *Exception Handling*
+- Types of Exceptions
+- Checked Exceptions
+- Unchecked Exceptions
+- Try-Catch Block
+- Throw and Throws
+- Finally Block
+
+* *Collections Framework*
+- *List*
+- ArrayList
+- LinkedList
+- *Set*
+- HashSet
+- LinkedHashSet
+- TreeSet
+- *Map*
+- HashMap
+- LinkedHashMap
+- TreeMap
+
+* *Java Input and Output (I/O)*
+- File Handling
+- File Class
+- Reading and Writing Files
+- Streams
+- Byte Streams
+- Character Streams
+
+* *Multithreading*
+- Creating Threads
+- Extending Thread Class
+- Implementing Runnable Interface
+- Thread Life Cycle
+- Synchronization
+- Inter-Thread Communication
+
+* *Java Utility Classes*
+- *String Handling*
+- String Class
+- StringBuilder and StringBuffer
+- Wrapper Classes
+- Autoboxing and Unboxing
+
+
+* *Java 8 Features (#Overview#)*
+- Lambda Expressions
+- Streams API
+- Functional Interfaces
+- Default and Static Methods in Interfaces
+
+== TestNG/JUnit Framework
+
+Here are some key topics to cover in an automation testing course focused on TestNG:
+
+* Introduction to TestNG
+** Overview of TestNG and its features
+** Differences between TestNG and JUnit
+** Installation and setup of TestNG in an IDE
+
+* TestNG Annotations
+** Understanding TestNG annotations like `@Test`, `@BeforeMethod`, `@AfterMethod`, `@BeforeClass`, `@AfterClass`, etc.
+** Creating and executing test cases using these annotations
+
+* TestNG Configuration
+** Configuration of test cases using `testng.xml`
+** Grouping and prioritizing test cases
+** Parameterization of tests using `@Parameters` and `DataProvider`
+
+* TestNG Assertions
+** Using `Assert` methods for validation
+** Soft assertions vs hard assertions
+
+* Parallel Testing in TestNG
+** Running tests in parallel
+** Configuring parallel execution in `testng.xml`
+
+* TestNG Reporting
+** Generating default HTML reports
+** Customizing reports using listeners like `IReporter`
+
+* Dependency Testing
+** Handling dependencies between test methods
+** Using `dependsOnMethods` and `dependsOnGroups`
+
+* Data-Driven Testing
+** Implementing data-driven tests using `DataProvider`
+** Reading data from external sources like Excel, CSV, etc.
+
+* Integration with Build Tools
+** Running TestNG tests using Maven or Gradle
+** Configuring build tools to generate TestNG reports
+
+These topics will provide a comprehensive understanding of TestNG for automation testing.
+
+== SQL / MySQL Database
+
+
+* Introduction to SQL
+** Overview of SQL and its importance in automation testing
+** Types of SQL databases (e.g., MySQL, PostgreSQL, Oracle)
+
+* SQL Basics
+** Understanding databases, tables, and records
+** Data types in SQL
+
+* Basic SQL Commands
+** `SELECT` statement for data retrieval
+** `WHERE` clause for filtering data
+** Sorting results with `ORDER BY`
+
+* SQL Functions
+** Common functions like `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`
+** String functions (e.g., `CONCAT`, `UPPER`, `LOWER`)
+** Date functions (e.g., `NOW`, `DATE_ADD`)
+
+* Data Manipulation
+** Inserting data using `INSERT INTO`
+** Updating data using `UPDATE`
+** Deleting data using `DELETE`
+
+* Joins in SQL
+** Understanding different types of joins: `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN`
+** Retrieving data from multiple tables using joins
+
+* Aggregating Data
+** Grouping data using `GROUP BY`
+** Filtering groups with `HAVING` clause
+
+* Indexes and Keys
+** Understanding primary keys and foreign keys
+** Using indexes for performance optimization
+
+* Basic Database Testing
+** Verifying data integrity with SQL queries
+** Validating test scenarios using SQL
+** Common database testing use cases in automation
+
+
+== Basic Understanding of Maven
+
+
+1. *Introduction to Maven*
+   - What is Maven?
+   - Benefits of using Maven
+
+2. *Maven Installation*
+   - Prerequisites
+   - Steps to install Maven
+
+3. *Maven Project Structure*
+   - Standard directory layout
+
+4. *POM File*
+   - What is a POM file?
+   - Basic structure of a POM file
+
+5. *Dependencies*
+   - Adding dependencies
+   - Understanding the dependency scope
+
+6. *Build Lifecycle*
+   - Phases of the build lifecycle
+
+7. *Plugins*
+   - What are plugins?
+   - Commonly used plugins
+
+8. *Example Maven Project*
+   - Creating a simple Maven project
+   - Adding dependencies
+   - Building the project
+
+== Selenium Automation with Java
+
+Here are the key topics to cover in an automation testing course focused on Selenium:
+
+* Introduction to Selenium
+** Overview of Selenium and its components (Selenium WebDriver, Selenium Grid, Selenium IDE)
+** Differences between Selenium and other automation tools
+** Setting up the Selenium environment (WebDriver, IDE, browser drivers)
+
+* Selenium WebDriver Basics
+** Understanding WebDriver architecture
+** Locating web elements using different strategies (ID, name, class name, XPath, CSS selectors)
+** Interacting with web elements (clicking, sending text, selecting dropdowns)
+
+* Handling Web Elements in Selenium
+** Working with buttons, text boxes, radio buttons, checkboxes
+** Handling alerts, pop-ups, and frames
+** Working with dynamic web elements
+
+* Synchronization in Selenium
+** Implicit and explicit waits
+** Handling AJAX calls with WebDriverWait
+
+* Selenium Advanced Concepts
+** Handling multiple windows and tabs
+** Capturing screenshots
+** Executing JavaScript with Selenium
+
+* Data-Driven Testing with Selenium
+** Reading data from external sources (Excel, CSV, databases)
+** Parameterization using TestNG’s `DataProvider`
+
+* Framework Development
+** Introduction to automation frameworks (keyword-driven, data-driven, hybrid)
+** Building a basic framework using Page Object Model (POM)
+** Using Maven or Gradle to manage dependencies
+
+* Cross-Browser Testing
+** Configuring tests to run on different browsers
+** Running tests in parallel with TestNG or JUnit
+
+* Reporting and Logging
+** Generating reports with TestNG or Extent Reports
+** Implementing logging using Log4j
+
+* Selenium Grid
+** Introduction to Selenium Grid for distributed testing
+** Setting up and running tests on remote machines
+
+* Continuous Integration with Selenium
+** Integrating Selenium tests with CI/CD pipelines (Jenkins, GitHub Actions)
+** Running Selenium tests automatically on code commits
+
+== Selenium Project 1
+
+== Selenium Project 2
+
+== Interview Preparation
+
+

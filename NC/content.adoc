@@ -1,0 +1,62 @@
+= Content - ChatGPT
+:toc: right
+:toclevels: 5
+:sectnums: 5
+
+== Example 1
+
+Please provide the code example in following format
+
+[source, java]
+----
+public class Main {
+    public static void main(String[] args) {
+        int day = 3;
+        String dayName;
+
+        switch (day) {
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+    }
+    }
+}
+----
+
+Explanation in asciidoc document format.
+
+Can you give example of for loop, while loop and do while loop in java.
+
+
+
+################################################################################
+
+== Example 2: Object Questions
+
+Can you give 5 basic objective java interview question on string.
+
+While generating bold please replace ** with *
+
+Please provide the code example in following format
+
+[source, java]
+----
+public class Main {
+    public static void main(String[] args) {
+        int day = 3;
+    }
+}
+----
+
+The answer my be in the format:
+
+.Click Here For Answer
+[%collapsible]
+====
+The answer is B
+====
+
+
+
+

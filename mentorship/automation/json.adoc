@@ -1,0 +1,485 @@
+= JSON
+:toc: right
+:toclevels: 5
+:sectnums: 5
+
+
+== JSON
+
+JSON (JavaScript Object Notation) is a lightweight data-interchange format that's easy for humans to read and write and easy for machines to parse and generate.
+It's commonly used for transmitting data in web applications between a server and a client.
+
+*Key Features of JSON:*
+
+* Data is represented in key-value pairs.
+* Uses simple syntax with minimal formatting (e.g., no comments).
+* Commonly used with APIs for exchanging data.
+
+*JSON Syntax:*
+
+* JSON objects are enclosed in `{ }`.
+* Data is written in key-value pairs, separated by a colon `:`.
+* Arrays are enclosed in `[ ]`.
+
+*Student JSON Example:*
+
+```json
+{
+    "studentId": "S12345",
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": 21,
+    "address": {
+        "street": "123 Elm Street",
+        "city": "Springfield",
+        "state": "IL",
+        "postalCode": "62704"
+    },
+    "courses": [
+        {
+            "courseId": "CSE101",
+            "courseName": "Introduction to Computer Science",
+            "credits": 4
+        },
+        {
+            "courseId": "MTH201",
+            "courseName": "Calculus I",
+            "credits": 3
+        }
+    ],
+    "isEnrolled": true
+}
+```
+
+*Explanation:*
+
+* The `address` is a nested JSON object containing details about the student's residence.
+* The `courses` field is an array containing multiple JSON objects, each representing a course the student is enrolled in.
+* The `isEnrolled` key is a boolean indicating the enrollment status of the student.
+
+---
+
+*Accessing JSON Elements:*
+
+1. **Accessing the `firstName`:**
+
+```javascript
+let firstName = student.firstName;
+console.log(firstName); // Output: John
+```
+
+2. **Accessing the `age`:**
+
+```javascript
+let age = student.age;
+console.log(age); // Output: 21
+```
+
+3. **Accessing the `city` in the `address` object:**
+
+```javascript
+let city = student.address.city;
+console.log(city); // Output: Springfield
+```
+
+4. **Accessing the `courseName` of the first course:**
+
+```javascript
+let firstCourseName = student.courses[0].courseName;
+console.log(firstCourseName); // Output: Introduction to Computer Science
+```
+
+5. **Accessing the `credits` of the second course:**
+
+```javascript
+let secondCourseCredits = student.courses[1].credits;
+console.log(secondCourseCredits); // Output: 3
+```
+
+6. **Accessing the `isEnrolled` status:**
+
+```javascript
+let enrollmentStatus = student.isEnrolled;
+console.log(enrollmentStatus); // Output: true
+```
+
+=== Advantages of JSON
+
+Here are the key advantages of using JSON:
+
+* **Lightweight and Simple**
+JSON has a minimal and clean syntax that is easy to write and read. It uses fewer characters, which makes it lightweight for data exchange.
+
+* **Human-Readable**
+JSON is easy to read and understand for humans, even without prior knowledge of the structure.
+
+* **Language-Independent**
+JSON is supported by most programming languages, making it a versatile format for data exchange between systems written in different languages.
+
+* **Easy to Parse**
+JSON can be quickly parsed and converted into objects in most programming languages using built-in functions or libraries.
+
+* **Structured Data Representation**
+JSON allows for nested objects and arrays, which makes it flexible to represent complex data structures.
+
+* **Widely Used in Web APIs**
+JSON is the standard format for data exchange in RESTful web services, enabling seamless communication between clients and servers.
+
+* **Efficient Data Transmission**
+Due to its lightweight nature, JSON reduces the size of the data being transmitted, leading to faster data transfer and better performance in web applications.
+
+These advantages make JSON a preferred format for data exchange in modern software applications, especially in web development and APIs.
+
+=== API Anatomy
+
+Here's the REST API anatomy in AsciiDoc format with *bold* for the headings:
+
+*Base URL:*
+
+The base URL is the root address for all the API endpoints.
+Example: `https://api.example.com/v1`
+
+*Endpoints:*
+
+Endpoints are specific paths appended to the base URL to access resources.
+Example: `/users`, `/products`, `/orders/12345`
+
+*HTTP Methods:*
+
+REST APIs use standard HTTP methods to perform operations on resources:
+
+* *GET:* Retrieve a resource (e.g., `GET /users`)
+* *POST:* Create a new resource (e.g., `POST /users`)
+* *PUT:* Update an existing resource (e.g., `PUT /users/123`)
+* *DELETE:* Delete a resource (e.g., `DELETE /users/123`)
+* *PATCH:* Partially update a resource (e.g., `PATCH /users/123`)
+
+*Headers:*
+
+Headers carry additional metadata about the request or response:
+
+* *Authorization:* Used for authentication (e.g., `Bearer token`)
+* *Content-Type:* Specifies the format of the request body (e.g., `application/json`)
+* *Accept:* Specifies the format the client expects in the response (e.g., `application/json`)
+
+*Request Body:*
+
+The request body is used in methods like POST, PUT, and PATCH to send data to the server.
+Typically formatted in JSON:
+```json
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com"
+}
+```
+
+*Response Body:*
+
+The response body contains the data returned by the API, often in JSON format.
+Example:
+```json
+{
+    "userId": 123,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com"
+}
+```
+
+*Status Codes:*
+
+HTTP status codes indicate the result of the API request:
+* *200 OK:* The request was successful.
+* *201 Created:* A new resource was created (often in response to a POST request).
+* *400 Bad Request:* The request was invalid or missing parameters.
+* *401 Unauthorized:* Authentication failed or was not provided.
+* *404 Not Found:* The requested resource does not exist.
+* *500 Internal Server Error:* A generic server error occurred.
+
+*Query Parameters:*
+
+Query parameters are appended to the endpoint to filter or modify the data returned.
+Example: `GET /users?age=25&location=NY`
+Query parameters follow the `?` in the URL and are separated by `&`.
+
+*Path Parameters:*
+
+Path parameters are used to specify a particular resource within an endpoint.
+Example: `GET /users/{userId}` → `GET /users/123`
+
+*Example REST API Request:*
+
+*Request:*
+`GET https://api.example.com/v1/users/123?include=address`
+
+*Headers:*
+
+```
+Authorization: Bearer <token>
+Accept: application/json
+```
+
+*Response:*
+
+```json
+{
+    "userId": 123,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "address": {
+        "street": "123 Elm St",
+        "city": "Springfield",
+        "state": "IL",
+        "postalCode": "62704"
+    }
+}
+```
+
+=== JSON Parsing 1
+
+Here are some simpler examples using JSON and the `json-path` library in Java.
+
+*JSON Structure*
+
+We’ll use the following simple JSON data for the examples:
+
+[source, json]
+----
+{
+  "store": {
+    "book": [
+      {
+        "title": "Book A",
+        "author": "Author 1",
+        "price": 9.99
+      },
+      {
+        "title": "Book B",
+        "author": "Author 2",
+        "price": 12.99
+      }
+    ],
+    "stationery": {
+      "item": "Pen",
+      "price": 1.5
+    }
+  }
+}
+----
+
+*Extracting a Simple Value*
+
+Suppose you want to extract the title of the first book.
+
+[source, java]
+----
+import com.jayway.jsonpath.JsonPath;
+
+public class SimpleJsonExample {
+    public static void main(String[] args) {
+        String json = "{ \"store\": { \"book\": [ { \"title\": \"Book A\", \"author\": \"Author 1\", \"price\": 9.99 }, { \"title\": \"Book B\", \"author\": \"Author 2\", \"price\": 12.99 } ], \"stationery\": { \"item\": \"Pen\", \"price\": 1.5 } } }";
+
+        // Extract the title of the first book
+        String firstBookTitle = JsonPath.parse(json).read("$.store.book[0].title");
+
+        System.out.println("First Book Title: " + firstBookTitle);
+    }
+}
+----
+
+**Output:**
+
+```
+First Book Title: Book A
+```
+
+*Extracting Multiple Values*
+
+You can extract all book titles from the JSON.
+
+[source, java]
+----
+import com.jayway.jsonpath.JsonPath;
+import java.util.List;
+
+public class SimpleJsonExample {
+    public static void main(String[] args) {
+        String json = "{ \"store\": { \"book\": [ { \"title\": \"Book A\", \"author\": \"Author 1\", \"price\": 9.99 }, { \"title\": \"Book B\", \"author\": \"Author 2\", \"price\": 12.99 } ], \"stationery\": { \"item\": \"Pen\", \"price\": 1.5 } } }";
+
+        // Extract all book titles
+        List<String> bookTitles = JsonPath.parse(json).read("$.store.book[*].title");
+
+        System.out.println("Book Titles: " + bookTitles);
+    }
+}
+----
+
+*Output:*
+
+```
+Book Titles: [Book A, Book B]
+```
+
+*Accessing Nested Values*
+
+Suppose you want to get the price of the pen.
+
+[source, java]
+----
+import com.jayway.jsonpath.JsonPath;
+
+public class SimpleJsonExample {
+    public static void main(String[] args) {
+        String json = "{ \"store\": { \"book\": [ { \"title\": \"Book A\", \"author\": \"Author 1\", \"price\": 9.99 }, { \"title\": \"Book B\", \"author\": \"Author 2\", \"price\": 12.99 } ], \"stationery\": { \"item\": \"Pen\", \"price\": 1.5 } } }";
+
+        // Extract the price of the pen
+        double penPrice = JsonPath.parse(json).read("$.store.stationery.price");
+
+        System.out.println("Pen Price: " + penPrice);
+    }
+}
+----
+
+**Output:**
+```
+Pen Price: 1.5
+```
+
+*Simple Filtering*
+
+Suppose you want to find the book with a price greater than 10.
+
+[source, java]
+----
+import com.jayway.jsonpath.JsonPath;
+import java.util.List;
+
+public class SimpleJsonExample {
+    public static void main(String[] args) {
+        String json = "{ \"store\": { \"book\": [ { \"title\": \"Book A\", \"author\": \"Author 1\", \"price\": 9.99 }, { \"title\": \"Book B\", \"author\": \"Author 2\", \"price\": 12.99 } ], \"stationery\": { \"item\": \"Pen\", \"price\": 1.5 } } }";
+
+        // Extract books with price greater than 10
+        List<Object> expensiveBooks = JsonPath.parse(json).read("$.store.book[?(@.price > 10)]");
+
+        System.out.println("Expensive Books: " + expensiveBooks);
+    }
+}
+----
+
+**Output:**
+```
+Expensive Books: [{"title":"Book B","author":"Author 2","price":12.99}]
+```
+
+
+=== JSON Paring 2
+
+Here is the example of using JSONPath functions in Java, formatted as requested:
+
+[source, java]
+----
+import com.jayway.jsonpath.JsonPath;
+
+public class Main {
+    public static void main(String[] args) {
+        String json = """
+        {
+            "store": {
+                "book": [
+                    { "title": "Book A", "price": 9.99 },
+                    { "title": "Book B", "price": 12.99 },
+                    { "title": "Book C", "price": 7.99 }
+                ]
+            }
+        }
+        """;
+
+        // Get the count of books
+        int bookCount = JsonPath.parse(json).read("$.store.book.length()");
+        System.out.println("Number of Books: " + bookCount);
+
+        // Get the minimum book price
+        double minPrice = JsonPath.parse(json).read("$.store.book.min(@.price)");
+        System.out.println("Minimum Book Price: " + minPrice);
+
+        // Get the maximum book price
+        double maxPrice = JsonPath.parse(json).read("$.store.book.max(@.price)");
+        System.out.println("Maximum Book Price: " + maxPrice);
+    }
+}
+----
+
+*Explanation*
+
+In this example:
+
+* The `length()` function is used to determine the total number of books in the JSON array.
+* The `min()` function finds the minimum price among the books.
+* The `max()` function finds the maximum price among the books.
+
+The JSON structure contains a list of books, each with a `title` and `price`. The functions allow for extracting and analyzing specific data from the JSON content.
+
+---
+
+The JSONPath expression `$.store.book.min(@.price)` is used to find the minimum value of a specific field within a JSON array. Here’s a breakdown of the components of this expression:
+
+* `$.store.book` - This part of the expression selects the `book` array within the `store` object. The `$` symbol represents the root of the JSON data.
+
+* `.min(@.price)` - This function is applied to the array selected by the previous part of the expression. It calculates the minimum value of the specified field, which in this case is `price`.
+
+* `@.price` - The `@` symbol represents the current element in the array being processed. `.price` specifies that we are interested in the `price` field of each book in the array.
+
+So, `$.store.book.min(@.price)`:
+
+1. Selects the `book` array from the JSON data.
+2. Applies the `min()` function to find the smallest value of the `price` field within that array.
+
+In essence, this expression finds the lowest price among all books in the `book` array.
+
+
+
+== JSON V/s XML
+
+[source,xml]
+----
+<student>
+    <studentId>S12345</studentId>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <age>21</age>
+    <address>
+        <street>123 Elm Street</street>
+        <city>Springfield</city>
+        <state>IL</state>
+        <postalCode>62704</postalCode>
+    </address>
+    <courses>
+        <course>
+            <courseId>CSE101</courseId>
+            <courseName>Introduction to Computer Science</courseName>
+            <credits>4</credits>
+        </course>
+        <course>
+            <courseId>MTH201</courseId>
+            <courseName>Calculus I</courseName>
+            <credits>3</credits>
+        </course>
+    </courses>
+    <isEnrolled>true</isEnrolled>
+</student>
+
+----
+
+
+== Commands
+
+[source,commandline]
+----
+mvn archetype:generate -DgroupId=com.nc -DartifactId=json-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+----
+
+== Resources
+
+* https://github.com/json-path/JsonPath

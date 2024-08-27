@@ -1,0 +1,132 @@
+= Programming - Evaluation
+:toc: right
+:toclevels:
+:sectnums:
+
+Here are 20 questions designed to evaluate a person’s readiness to learn programming, focusing on problem-solving, logical thinking, attention to detail, and persistence:
+
+### Section 1: Logical Thinking and Problem-Solving (8 Questions)
+1. *What is the next number in this sequence? 2, 4, 8, 16, __?*
+- a) 20
+- b) 24
+- c) 32
+- d) 30
+
+2. *If all roses are flowers, and all flowers need water, what can you conclude?*
+- a) Roses do not need water.
+- b) Roses need water.
+- c) Only some flowers need water.
+- d) All roses are red.
+
+3. *A man buys 3 books for $5 each and sells them for $7 each. How much profit does he make?*
+- a) $6
+- b) $9
+- c) $15
+- d) $21
+
+4. *Which of the following is a step-by-step approach to solve a problem?*
+- a) Guesswork
+- b) Algorithm
+- c) Random search
+- d) Estimation
+
+5. *You are given 3 tasks to do in a specific order. Task A comes before Task B. Task B comes before Task C. Which task should you complete first?*
+- a) Task A
+- b) Task B
+- c) Task C
+- d) Any order
+
+6. *What is the smallest positive integer that is divisible by both 2 and 3?*
+- a) 4
+- b) 5
+- c) 6
+- d) 9
+
+7. *If it takes 2 minutes to boil an egg, how long will it take to boil 3 eggs?*
+- a) 2 minutes
+- b) 3 minutes
+- c) 4 minutes
+- d) 6 minutes
+
+8. *Which of these is a logical statement?*
+- a) “The sun rises in the west.”
+- b) “The sky is green.”
+- c) “2 + 2 = 4.”
+- d) “Water is solid at room temperature.”
+
+### Section 2: Attention to Detail (6 Questions)
+9. *If you follow these instructions: "Turn left, then take two steps forward, and then turn right," which direction are you facing if you start by facing north?*
+- a) East
+- b) West
+- c) North
+- d) South
+
+10. *In the word "DEVELOPMENT," which letter is in the 5th position?*
+- a) E
+- b) L
+- c) V
+- d) O
+
+11. *Identify the error in this sentence: “Thre is an error in this sentnce.”*
+- a) There is no error.
+- b) Error in spelling of "Thre".
+- c) Error in spelling of "sentnce".
+- d) Both b and c.
+
+12. *Which of the following is the correct spelling?*
+- a) Accomodation
+- b) Accommodation
+- c) Acommodation
+- d) Accommdation
+
+13. *A recipe says to add 2 tablespoons of sugar. How much sugar would you add if you need to make half the recipe?*
+- a) 2 tablespoons
+- b) 1 tablespoon
+- c) 3 tablespoons
+- d) 0.5 tablespoon
+
+14. *If you misplace a semicolon in a sentence, what impact would it have?*
+- a) None
+- b) Slight change in meaning
+- c) Major change in meaning
+- d) The sentence becomes grammatically incorrect.
+
+### Section 3: Patience and Persistence (4 Questions)
+15. *How do you approach solving a puzzle you find difficult?*
+- a) Give up quickly.
+- b) Try different strategies until you find a solution.
+- c) Ask someone else to do it.
+- d) Skip it and move on.
+
+16. *If your initial attempt at solving a problem fails, what do you do next?*
+- a) Try a different method.
+- b) Stop trying.
+- c) Blame external factors.
+- d) Guess the answer randomly.
+
+17. *How do you handle a task that involves repeating the same step multiple times?*
+- a) Get frustrated and quit.
+- b) Complete the task step by step with patience.
+- c) Rush through it without checking for accuracy.
+- d) Avoid the task altogether.
+
+18. *When faced with a complicated problem, do you:*
+- a) Try to solve it in one go.
+- b) Break it down into smaller parts.
+- c) Avoid thinking too much.
+- d) Ignore the problem.
+
+### Section 4: Curiosity and Willingness to Learn (2 Questions)
+19. *How often do you seek out new knowledge or skills?*
+- a) Frequently.
+- b) Sometimes.
+- c) Rarely.
+- d) Never.
+
+20. *What would you do if you don’t understand a concept while learning?*
+- a) Ignore it.
+- b) Ask questions or do additional research.
+- c) Pretend to understand.
+- d) Stop learning.
+
+These questions cover different aspects to assess a person’s readiness for programming and understanding of OOP concepts.

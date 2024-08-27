@@ -1,0 +1,120 @@
+= Core Java Exam
+:toc: right
+:toclevels: 5
+:sectnums: 5
+
+== Question Set
+
+*Core Java Programming - 1 Hour Question Paper*
+
+This question paper is divided into two sections: Objective Exercise and Coding Exercise. Answer all the questions.
+
+=== Section 1: Objective Exercise (20 Marks)
+
+*Question 1: Overloading in Java*
+
+*Which of the following is true about method overloading?*
+
+A. Methods must have the same name and same parameter types.
+
+B. Methods must have the same name but different return types.
+
+C. Methods must have the same name but different parameter lists.
+
+D. Methods must have the same return type and different access modifiers.
+
+.Click Here For Answer
+[%collapsible]
+====
+*The answer is* `C`
+====
+
+*Question 2: Method Overriding*
+
+*Which keyword is used to prevent a method from being overridden?*
+
+A. static
+
+B. final
+
+C. private
+
+D. abstract
+
+.Click Here For Answer
+[%collapsible]
+====
+*The answer is* `B`
+====
+
+*Question 3: Inheritance in Java*
+
+*Which of the following statements is true about inheritance?*
+
+A. Java supports multiple inheritance through classes.
+
+B. A subclass can inherit private members of the superclass.
+
+C. Interfaces can extend multiple interfaces.
+
+D. A class can extend more than one class at a time.
+
+.Click Here For Answer
+[%collapsible]
+====
+*The answer is* `C`
+====
+
+*Question 4: Java Collections*
+
+*Which of the following classes implements the List interface?*
+
+A. HashSet
+
+B. LinkedList
+
+C. TreeMap
+
+D. HashMap
+
+.Click Here For Answer
+[%collapsible]
+====
+*The answer is* `B`
+====
+
+*Question 5: Exception Handling*
+
+*Which of the following is not a checked exception in Java?*
+
+A. IOException
+
+B. SQLException
+
+C. NullPointerException
+
+D. ClassNotFoundException
+
+.Click Here For Answer
+[%collapsible]
+====
+*The answer is* `C`
+====
+
+=== Section 2: Coding Exercise (30 Marks)
+
+*Question 6: Method Overloading*
+
+Write a Java program to demonstrate method overloading by creating two `add` methods, one that adds two integers and another that adds two double values.
+
+*Question 7: Method Overriding and Inheritance*
+
+Create a superclass named `Animal` with a method `sound()`. Create a subclass named `Dog` that overrides the `sound()` method to print "Bark". Test the program by calling the `sound()` method on an object of the `Dog` class.
+
+*Question 8: Java Collections*
+
+Write a program to create a list of integers using `ArrayList`, add five integers to it, and then print all the elements in the list.
+
+*Question 9: Exception Handling*
+
+Write a program that accepts two integers from the user and divides them. Handle any `ArithmeticException` that may occur due to division by zero, and print an appropriate message.
