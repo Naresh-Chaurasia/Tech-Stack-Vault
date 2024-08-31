@@ -2556,7 +2556,7 @@ In summary:
 
 ##############################################
 
-Here are five basic objective Java interview questions on collections:
+=== Collections Question Set
 
 1. **What is the difference between a List and a Set in Java?**
 
