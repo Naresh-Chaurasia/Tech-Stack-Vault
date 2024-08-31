@@ -3,21 +3,28 @@
 :toclevels:5
 :sectnums:
 
+##############################################
+
 == What are Web Services?
 
 An API (Application Programming Interface) is a set of rules and protocols that allows one software application to interact with another. It defines how requests should be made, what data formats to use, and how responses should be handled. APIs enable different systems, applications, or services to communicate and share data seamlessly. In simpler terms, an API is like a bridge that connects different software components, allowing them to work together efficiently.
 
 == Basics of REST API
-- Definition of REST
-- REST vs. SOAP
 
-== Components of a RESTful Service
-- Resources
-- URIs (Uniform Resource Identifiers)
+*Definition of REST*
 
+A REST API (Representational State Transfer Application Programming Interface) is a set of rules and conventions for building and interacting with web services. REST APIs use HTTP methods (such as GET, POST, PUT, DELETE) to perform operations on resources, which are typically represented in formats like JSON or XML. These APIs are stateless, meaning each request from a client to the server must contain all the information needed to understand and process the request. RESTful services are designed to be scalable, flexible, and easy to use, making them widely adopted in web development.
+
+*REST vs. SOAP*
+
+== REST vs. HTTP
+
+* REST is an architectural style for designing web services, while HTTP is a protocol used for communication on the web.
+* RESTful services are commonly implemented using HTTP, but REST can, in theory, be implemented over any protocol.
+* REST defines how resources should be accessed and manipulated, while HTTP provides the methods (GET, POST, etc.) to perform those operations.
+* In summary, REST is a set of principles for web services, and HTTP is the protocol that is often used to implement those principles.
 
 == HTTP Methods
-
   - GET
   - POST
   - PUT
@@ -152,7 +159,80 @@ This overview provides a brief description and examples of how to use the common
   - 4xx (Client Error)
   - 5xx (Server Error)
 
+== Anatomy of API Request
+
+An API request is a call made by a client to a server, asking the server to perform a specific action or return data. The structure of an API request typically includes the following components:
+
+*1. Endpoint (URL)*:
+
+- The endpoint is the URL that specifies the location of the API resource.
+- It typically includes the base URL (domain) and the path to the specific resource.
+- Example: `https://api.example.com/users/123`.
+
+*2. HTTP Method (Verb)*:
+
+- This defines the action to be performed on the resource.
+- Common methods include:
+* GET: Retrieve data.
+* POST: Create a new resource.
+* PUT: Update an existing resource.
+* DELETE: Remove a resource.
+
+*3. Headers*:
+
+- Headers provide additional information about the request.
+- Common headers include:
+* `Content-Type`: Specifies the format of the request body (e.g., `application/json`).
+* `Authorization`: Includes credentials for authentication (e.g., tokens).
+
+*4. Query Parameters*:
+
+- Optional parameters appended to the URL to filter or modify the request.
+- Example: `https://api.example.com/users?status=active` (filters users by active status).
+
+*5. Request Body*:
+
+- Used in methods like POST and PUT to send data to the server.
+- The body usually contains the resource data in a format like JSON.
+- Example:
+```json
+{
+"name": "John Doe",
+"email": "john.doe@example.com"
+}
+```
+
+*6. Authentication/Authorization*:
+- Ensures that the client has the right permissions to access or modify the resource.
+- This is often handled via tokens, API keys, or OAuth.
+
+**Example API Request:**
+
+```http
+POST /users HTTP/1.1
+Host: api.example.com
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+}
+```
+
+In this example:
+- The endpoint is `/users`.
+- The method is `POST`.
+- The headers include `Content-Type` and `Authorization`.
+- The request body contains the data for the new user.
+
+This structured approach allows the client and server to communicate effectively and securely in a RESTful manner.
+
+
+
+
 == Consuming RESTful APIs
+
 - Tools for Testing APIs (Postman, curl)
 - Making Requests (with Python, JavaScript)
 - Parsing Responses
@@ -167,122 +247,107 @@ This overview provides a brief description and examples of how to use the common
 - Building a Simple REST API with Flask (Python)
 - Building a Simple REST API with Express (JavaScript/Node.js)
 
-== JSON
+##############################################
 
-JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is commonly used for transmitting data in web applications, between a server and a client, or between different parts of an application.
+== Path Parameter V/s Query Parameter
 
-*Key Features of JSON*
+=== Path Parameter
 
-1. *Simplicity*: JSON's syntax is very simple and easy to understand. It uses key-value pairs and ordered lists to structure data.
-2. *Language Independent*: Although JSON is derived from JavaScript, it is language-independent and can be used with many programming languages, including Python, Java, C#, PHP, and more.
-3. *Text Format*: JSON is a plain text format, which makes it easy to transmit over a network and compatible with various data storage systems.
+- Path parameters are part of the URL path and are used to identify a specific resource.
+- They are typically used to specify the ID of a resource or some other key information.
 
-*JSON Structure*
+**Example:**
 
-JSON data is written as key-value pairs:
+- URL: `https://api.example.com/users/123`
+- Here, `123` is a path parameter that identifies a specific user.
 
-- *Objects*: Enclosed in curly braces `{}`. Objects contain key-value pairs.
-- *Arrays*: Enclosed in square brackets `[]`. Arrays can contain multiple values.
-- *Keys*: Strings enclosed in double quotes.
-- *Values*: Can be strings, numbers, objects, arrays, `true`, `false`, or `null`.
+**Usage in an API request:**
 
-*Example*
+```http
+GET /users/123 HTTP/1.1
+Host: api.example.com
+```
 
-Here’s a simple example of JSON data:
+In this example, the client is requesting information about the user with ID `123`.
 
-[source,json]
-----
-{
-    "name": "Alice",
-    "age": 30,
-    "isStudent": false,
-    "courses": ["Math", "Science", "History"],
-    "address": {
-        "street": "123 Main St",
-        "city": "Anytown",
-        "zipCode": "12345"
-    }
-}
-----
+=== Query Parameter
 
-*Explanation*
+- Query parameters are appended to the end of the URL after a `?` and are used to filter or modify the request.
+- They are typically used for optional parameters, such as search criteria, pagination, or sorting.
 
-- *"name"*: A string value.
-- *"age"*: A number value.
-- *"isStudent"*: A boolean value.
-- *"courses"*: An array of strings.
-- *"address"*: A nested object containing additional key-value pairs.
+**Example:**
+- URL: `https://api.example.com/users?status=active&sort=desc`
+- Here, `status=active` and `sort=desc` are query parameters.
 
-JSON is widely used in web APIs, configuration files, and data storage because of its simplicity and flexibility.
+**Usage in an API request:**
 
-*JSON Examples*
+```http
+GET /users?status=active&sort=desc HTTP/1.1
+Host: api.example.com
+```
 
-Sure! Here are five JSON examples with increasing levels of complexity:
+In this example:
+- `status=active` filters the users to only return those who are active.
+- `sort=desc` sorts the results in descending order.
 
-*Example 1: Simple JSON Object*
+*Summary:*
 
-[source,json]
-----
-{
-    "name": "John Doe",
-    "age": 30,
-    "isStudent": false
-}
-----
-
-*Example 2: JSON Object with an Array*
-
-[source,json]
-----
-{
-    "name": "Jane Smith",
-    "age": 25,
-    "isStudent": true,
-    "subjects": ["Math", "Science", "History"]
-}
-----
-
-*Example 3: Nested JSON Object*
-
-[source,json]
-----
-{
-    "name": "Alice Johnson",
-    "age": 28,
-    "address": {
-        "street": "123 Main St",
-        "city": "Anytown",
-        "zipCode": "12345"
-    },
-    "isStudent": false
-}
-----
-
-*Example 4: JSON Object with Nested Arrays and Objects*
-
-[source,json]
-----
-{
-    "name": "Bob Brown",
-    "age": 35,
-    "address": {
-        "street": "456 Elm St",
-        "city": "Othertown",
-        "zipCode": "67890"
-    },
-    "isStudent": false,
-    "subjects": [
-        {
-            "name": "Math",
-            "grade": "A"
-        },
-        {
-            "name": "Science",
-            "grade": "B"
-        }
-    ]
-}
-----
+- *Path parameters* are part of the URL path and are often used to uniquely identify a resource.
+- *Query parameters* are added to the URL after the `?` and are used to filter, modify, or refine the request.
 
 
-These examples progressively introduce more complexity by adding arrays, nested objects, and further levels of nesting.
+---
+
+Here are 10 basic objective Java interview questions on REST API:
+
+== Question Set
+
+*What does REST stand for in the context of web services?*
+
+.Click Here For Answer
+[%collapsible]
+====
+*Representational State Transfer*
+====
+
+*Which HTTP method is typically used to retrieve a resource from a REST API?*
+
+.Click Here For Answer
+[%collapsible]
+====
+*GET*
+====
+
+
+*Which of the following is NOT an HTTP method used in REST APIs?*
+*A) POST*
+*B) GET*
+*C) INSERT*
+*D) DELETE*
+
+.Click Here For Answer
+[%collapsible]
+====
+*C) INSERT*
+====
+
+*What is the status code returned by a REST API when a resource is successfully created?*
+
+.Click Here For Answer
+[%collapsible]
+====
+*201 Created*
+====
+
+*Which of the following status codes indicates that a requested resource was not found?*
+*A) 200*
+*B) 404*
+*C) 500*
+*D) 403*
+
+.Click Here For Answer
+[%collapsible]
+====
+*B) 404*
+====
+
