@@ -2582,22 +2582,6 @@ The `HashMap` class implements the *Map* interface.
 The default size is *10*.
 ====
 
-4. **Which collection class is synchronized by default in Java?**
-
-.Click Here For Answer
-[%collapsible]
-====
-*Vector* is synchronized by default.
-====
-
-5. **What is the time complexity of searching for an element in a `HashSet`?**
-
-.Click Here For Answer
-[%collapsible]
-====
-The average time complexity of searching for an element in a `HashSet` is *O(1)*.
-====
-
 ##############################################
 
 == MultiThreading Concepts
