@@ -2556,6 +2556,50 @@ In summary:
 
 ##############################################
 
+Here are five basic objective Java interview questions on collections:
+
+1. **What is the difference between a List and a Set in Java?**
+
+.Click Here For Answer
+[%collapsible]
+====
+*List* allows duplicate elements, while *Set* does not allow duplicate elements.
+====
+
+2. **Which interface does the `HashMap` class implement in Java?**
+
+.Click Here For Answer
+[%collapsible]
+====
+The `HashMap` class implements the *Map* interface.
+====
+
+3. **What is the default size of an `ArrayList` in Java when it is created without specifying the initial capacity?**
+
+.Click Here For Answer
+[%collapsible]
+====
+The default size is *10*.
+====
+
+4. **Which collection class is synchronized by default in Java?**
+
+.Click Here For Answer
+[%collapsible]
+====
+*Vector* is synchronized by default.
+====
+
+5. **What is the time complexity of searching for an element in a `HashSet`?**
+
+.Click Here For Answer
+[%collapsible]
+====
+The average time complexity of searching for an element in a `HashSet` is *O(1)*.
+====
+
+##############################################
+
 == MultiThreading Concepts
 
 Here is a professional explanation of the concept of MultiThreading in Java in AsciiDoc format:
