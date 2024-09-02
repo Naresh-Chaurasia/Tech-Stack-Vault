@@ -298,6 +298,78 @@ In this example:
 
 ---
 
+
+######
+
+**Swagger** is an open-source framework that helps in designing, documenting, and testing RESTful APIs. For someone involved in API testing, like yourself, Swagger is particularly useful because it provides a clear and interactive way to understand and test APIs.
+
+### How Swagger is Used in API Testing
+
+1. **Understanding the API**: Swagger provides a detailed and interactive documentation of the API. It lists all the endpoints, the methods (GET, POST, PUT, DELETE, etc.), required parameters, request/response formats, and authentication details. This makes it easier for testers to understand how the API works.
+
+2. **Manual Testing with Swagger UI**: Swagger UI is a tool that allows you to manually test API endpoints directly from the browser. You can input parameters, headers, and body data, then see the response directly. This helps in quick verification and exploratory testing of the API.
+
+3. **Automating Tests**: Once you've understood the API, you can automate the testing using tools like **Rest Assured**. Swagger can be used to generate the API contracts, which can be referenced in your automation tests to ensure that the API behavior is consistent with the documentation.
+
+### Example
+
+Imagine you're testing a simple API for managing books. The API has an endpoint `/books` that supports different HTTP methods. Swagger documentation for this API might look something like this:
+
+```yaml
+openapi: 3.0.0
+info:
+  title: Book API
+  version: 1.0.0
+paths:
+  /books:
+    get:
+      summary: Get a list of all books
+      responses:
+        '200':
+          description: A JSON array of book objects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    title:
+                      type: string
+                    author:
+                      type: string
+    post:
+      summary: Add a new book
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                author:
+                  type: string
+      responses:
+        '201':
+          description: Book created successfully
+```
+
+In this example:
+* The `GET /books` endpoint returns a list of books.
+* The `POST /books` endpoint allows you to add a new book.
+
+You can use **Swagger UI** to manually test these endpoints. For automation, you would use **Rest Assured** to write test cases that send HTTP requests to these endpoints and validate the responses against expected results. The Swagger specification serves as a blueprint for your test cases.
+
+### Using Swagger with Rest Assured
+
+You can integrate Swagger with Rest Assured by importing the Swagger specification and generating tests based on the documented endpoints. This ensures that your automated tests are aligned with the API documentation, reducing the chances of missing any edge cases or changes in the API.
+
+######
+
 Here are 10 basic objective Java interview questions on REST API:
 
 == Question Set

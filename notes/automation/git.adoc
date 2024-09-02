@@ -6,6 +6,8 @@
 
 == SSH Key Generation
 
+TIP: Install Git Bash
+
 To generate and add an SSH key for GitHub on a Windows machine, follow these steps:
 
 1. **Check for Existing SSH Keys**:
