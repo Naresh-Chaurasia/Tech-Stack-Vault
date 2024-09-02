@@ -301,9 +301,11 @@ In this example:
 
 ######
 
+== Swagger
+
 **Swagger** is an open-source framework that helps in designing, documenting, and testing RESTful APIs. For someone involved in API testing, like yourself, Swagger is particularly useful because it provides a clear and interactive way to understand and test APIs.
 
-### How Swagger is Used in API Testing
+*How Swagger is Used in API Testing*
 
 1. **Understanding the API**: Swagger provides a detailed and interactive documentation of the API. It lists all the endpoints, the methods (GET, POST, PUT, DELETE, etc.), required parameters, request/response formats, and authentication details. This makes it easier for testers to understand how the API works.
 
@@ -311,7 +313,7 @@ In this example:
 
 3. **Automating Tests**: Once you've understood the API, you can automate the testing using tools like **Rest Assured**. Swagger can be used to generate the API contracts, which can be referenced in your automation tests to ensure that the API behavior is consistent with the documentation.
 
-### Example
+*Example*
 
 Imagine you're testing a simple API for managing books. The API has an endpoint `/books` that supports different HTTP methods. Swagger documentation for this API might look something like this:
 
@@ -364,7 +366,7 @@ In this example:
 
 You can use **Swagger UI** to manually test these endpoints. For automation, you would use **Rest Assured** to write test cases that send HTTP requests to these endpoints and validate the responses against expected results. The Swagger specification serves as a blueprint for your test cases.
 
-### Using Swagger with Rest Assured
+*Using Swagger with Rest Assured*
 
 You can integrate Swagger with Rest Assured by importing the Swagger specification and generating tests based on the documented endpoints. This ensures that your automated tests are aligned with the API documentation, reducing the chances of missing any edge cases or changes in the API.
 
