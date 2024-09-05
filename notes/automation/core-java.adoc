@@ -7,6 +7,9 @@
 
 == Path Environment Variable
 
+how are you. i am fine. i am typing
+
+
 The `PATH` environment variable in Java (and more broadly in any operating system) is a system variable used to specify the directories in which executable programs are located. When you run a command in the terminal or command prompt, the operating system searches through these directories to find the executable file corresponding to the command.
 
 *Importance of `PATH` in Java*

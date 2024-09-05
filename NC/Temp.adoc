@@ -1,66 +1,8 @@
-**Swagger** is an open-source framework that helps in designing, documenting, and testing RESTful APIs. For someone involved in API testing, like yourself, Swagger is particularly useful because it provides a clear and interactive way to understand and test APIs.
 
-### How Swagger is Used in API Testing
+1.Job Title : PRINCIPAL ARCHITECT 2.Job Summary :
 
-1. **Understanding the API**: Swagger provides a detailed and interactive documentation of the API. It lists all the endpoints, the methods (GET, POST, PUT, DELETE, etc.), required parameters, request/response formats, and authentication details. This makes it easier for testers to understand how the API works.
+* Over 15+ years of strong hands-on experience in .Net/ Java
 
-2. **Manual Testing with Swagger UI**: Swagger UI is a tool that allows you to manually test API endpoints directly from the browser. You can input parameters, headers, and body data, then see the response directly. This helps in quick verification and exploratory testing of the API.
+* Should have hands-on experience in Development and Maintenance of applications * Health care domain experience preferred 3.Experience : 15to18yrs 4.Required Skills :
 
-3. **Automating Tests**: Once you've understood the API, you can automate the testing using tools like **Rest Assured**. Swagger can be used to generate the API contracts, which can be referenced in your automation tests to ensure that the API behavior is consistent with the documentation.
-
-### Example
-
-Imagine you're testing a simple API for managing books. The API has an endpoint `/books` that supports different HTTP methods. Swagger documentation for this API might look something like this:
-
-```yaml
-openapi: 3.0.0
-info:
-  title: Book API
-  version: 1.0.0
-paths:
-  /books:
-    get:
-      summary: Get a list of all books
-      responses:
-        '200':
-          description: A JSON array of book objects
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    title:
-                      type: string
-                    author:
-                      type: string
-    post:
-      summary: Add a new book
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                author:
-                  type: string
-      responses:
-        '201':
-          description: Book created successfully
-```
-
-In this example:
-* The `GET /books` endpoint returns a list of books.
-* The `POST /books` endpoint allows you to add a new book.
-
-You can use **Swagger UI** to manually test these endpoints. For automation, you would use **Rest Assured** to write test cases that send HTTP requests to these endpoints and validate the responses against expected results. The Swagger specification serves as a blueprint for your test cases.
-
-### Using Swagger with Rest Assured
-
-You can integrate Swagger with Rest Assured by importing the Swagger specification and generating tests based on the documented endpoints. This ensures that your automated tests are aligned with the API documentation, reducing the chances of missing any edge cases or changes in the API.
+Technical Skills : ,Java Domain Skills : 5.Nice to have skills : Techincal Skills : Domain Skills : 6.Technology : Application Enrichment & Upgrad 7.Shift : Day 8.Responsibilities : 1. Act as a Point of Contact to the customer on project related activities 2. Responsible for client expectation management on delivery, liaising with multiple project teams. 3. Accountable for Delivery of Services end to end as per the defined contract for the engagement being managed and adherence of SLA, Metrics and KPI as per contract. 4. Act as an escalation point for delivery issues for client leadership 5. Ensure Service Continuity to all services being delivered and keep the BCP plan up to date. 6. Responsible for billing and invoicing 7. Driving Continuous Improvement, working with clients to recommend improvements and drive inefficiencies out of the engagement. 8. Delivery excellence by establishing and standardizing delivery processes with estimation models, code standards, quality processes and reporting. 9. Responsible for forecasting and managing staffing requirements for the portfolio 10. Devise Corrective and Preventive actions for any Service Level breaches, near misses and Customer escalations 11. Manage attrition through skip level meetings, planning interventions, engagement calendars. Service Execution: 1. Represent the delivery team to provide updates during Governance meetings like Status Review, Monthly performance, Business Review meetings, Service Governance etc. 2. Work closely with Stakeholders (Internal/External) to fulfil the needs as per engagement dynamics update leadership on key risks in the engagement. 3. Conflict Management: Anticipate conflict situations and oversee timely resolution of escalated issues. 4. Knowledge Management: Establish governance & oversight between Delivery and SMO for constant updating and validation of documentation within KEDB. 5. Identify value-adds and contribute to best practices, innovations and focus on adding value to the client / organization, share value addition and best practices across teams. 9.Job Location : Primary :INTNCHNA10-MEPZ (TBM) SDB 1 -4 SEZ Alternate : , 10.Job Type : 40AV09 Principal Architect 11.Demand Requires Travel? : N 12.Certifications Required : NA 13.Work Model : Hybrid 14.Sub Contractor allowed : N
