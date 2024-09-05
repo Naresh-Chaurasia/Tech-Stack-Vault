@@ -7,7 +7,10 @@ public class MyThread {
         String name = t1.getName();
 
         System.out.println(name);
-
         System.out.println("My Thread");
+
+
+        CustomThread c = new CustomThread();
+        c.display();
     }
 }
