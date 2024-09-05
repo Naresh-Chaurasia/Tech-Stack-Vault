@@ -5,13 +5,13 @@ public class MyThread {
 
         Thread t1 = Thread.currentThread();
         String name1 = t1.getName();
-        System.out.println(name1);
+        System.out.println("name1="+name1);
 
 
         System.out.println("My Main Thread");
 
 
         CustomThread c = new CustomThread();
-        c.run();
+        c.start();
     }
 }
