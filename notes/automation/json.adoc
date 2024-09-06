@@ -4,6 +4,9 @@
 :sectnums: 5
 
 
+* https://jsonpathfinder.com/
+* https://jsonpath.com/
+
 == JSON
 
 JSON (JavaScript Object Notation) is a lightweight data-interchange format that's easy for humans to read and write and easy for machines to parse and generate.
@@ -130,112 +133,7 @@ Due to its lightweight nature, JSON reduces the size of the data being transmitt
 
 These advantages make JSON a preferred format for data exchange in modern software applications, especially in web development and APIs.
 
-=== API Anatomy
-
-Here's the REST API anatomy in AsciiDoc format with *bold* for the headings:
-
-*Base URL:*
-
-The base URL is the root address for all the API endpoints.
-Example: `https://api.example.com/v1`
-
-*Endpoints:*
-
-Endpoints are specific paths appended to the base URL to access resources.
-Example: `/users`, `/products`, `/orders/12345`
-
-*HTTP Methods:*
-
-REST APIs use standard HTTP methods to perform operations on resources:
-
-* *GET:* Retrieve a resource (e.g., `GET /users`)
-* *POST:* Create a new resource (e.g., `POST /users`)
-* *PUT:* Update an existing resource (e.g., `PUT /users/123`)
-* *DELETE:* Delete a resource (e.g., `DELETE /users/123`)
-* *PATCH:* Partially update a resource (e.g., `PATCH /users/123`)
-
-*Headers:*
-
-Headers carry additional metadata about the request or response:
-
-* *Authorization:* Used for authentication (e.g., `Bearer token`)
-* *Content-Type:* Specifies the format of the request body (e.g., `application/json`)
-* *Accept:* Specifies the format the client expects in the response (e.g., `application/json`)
-
-*Request Body:*
-
-The request body is used in methods like POST, PUT, and PATCH to send data to the server.
-Typically formatted in JSON:
-```json
-{
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com"
-}
-```
-
-*Response Body:*
-
-The response body contains the data returned by the API, often in JSON format.
-Example:
-```json
-{
-    "userId": 123,
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com"
-}
-```
-
-*Status Codes:*
-
-HTTP status codes indicate the result of the API request:
-* *200 OK:* The request was successful.
-* *201 Created:* A new resource was created (often in response to a POST request).
-* *400 Bad Request:* The request was invalid or missing parameters.
-* *401 Unauthorized:* Authentication failed or was not provided.
-* *404 Not Found:* The requested resource does not exist.
-* *500 Internal Server Error:* A generic server error occurred.
-
-*Query Parameters:*
-
-Query parameters are appended to the endpoint to filter or modify the data returned.
-Example: `GET /users?age=25&location=NY`
-Query parameters follow the `?` in the URL and are separated by `&`.
-
-*Path Parameters:*
-
-Path parameters are used to specify a particular resource within an endpoint.
-Example: `GET /users/{userId}` → `GET /users/123`
-
-*Example REST API Request:*
-
-*Request:*
-`GET https://api.example.com/v1/users/123?include=address`
-
-*Headers:*
-
-```
-Authorization: Bearer <token>
-Accept: application/json
-```
-
-*Response:*
-
-```json
-{
-    "userId": 123,
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com",
-    "address": {
-        "street": "123 Elm St",
-        "city": "Springfield",
-        "state": "IL",
-        "postalCode": "62704"
-    }
-}
-```
+######
 
 === JSON Parsing 1
 
@@ -438,39 +336,6 @@ So, `$.store.book.min(@.price)`:
 
 In essence, this expression finds the lowest price among all books in the `book` array.
 
-
-
-== JSON V/s XML
-
-[source,xml]
-----
-<student>
-    <studentId>S12345</studentId>
-    <firstName>John</firstName>
-    <lastName>Doe</lastName>
-    <age>21</age>
-    <address>
-        <street>123 Elm Street</street>
-        <city>Springfield</city>
-        <state>IL</state>
-        <postalCode>62704</postalCode>
-    </address>
-    <courses>
-        <course>
-            <courseId>CSE101</courseId>
-            <courseName>Introduction to Computer Science</courseName>
-            <credits>4</credits>
-        </course>
-        <course>
-            <courseId>MTH201</courseId>
-            <courseName>Calculus I</courseName>
-            <credits>3</credits>
-        </course>
-    </courses>
-    <isEnrolled>true</isEnrolled>
-</student>
-
-----
 
 
 == Commands

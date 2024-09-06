@@ -13,5 +13,8 @@ public class MyThread {
 
         CustomThread c = new CustomThread();
         c.start();
+
+        CustomThread c2 = new CustomThread();
+        c2.start();
     }
 }
