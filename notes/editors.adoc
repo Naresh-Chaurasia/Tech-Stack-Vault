@@ -1,0 +1,142 @@
+= Editors
+:toc: right
+:toclevels: 5
+:sectnums: 5
+
+== IntelliJ
+
+Here is a list of essential IntelliJ IDEA shortcuts to improve your productivity as a Java developer:
+
+* *Basic Navigation*
+- `Ctrl + N` (Windows/Linux) / `Cmd + O` (Mac): Quickly find a class by name.
+- `Ctrl + Shift + N` (Windows/Linux) / `Cmd + Shift + O` (Mac): Find any file by name.
+- `Ctrl + B` (Windows/Linux) / `Cmd + B` (Mac): Go to the declaration of a method or variable.
+- `Ctrl + E` (Windows/Linux) / `Cmd + E` (Mac): Recent files menu.
+- `Alt + F1` (Windows/Linux) / `Cmd + Option + F1` (Mac): Select current file in project explorer.
+
+---
+
+* *Code Editing*
+- `Ctrl + Space` (Windows/Linux) / `Cmd + Space` (Mac): Basic code completion.
+- `Ctrl + Shift + Enter` (Windows/Linux) / `Cmd + Shift + Enter` (Mac): Complete the current statement.
+- `Ctrl + D` (Windows/Linux) / `Cmd + D` (Mac): Duplicate the current line or selection.
+- `Ctrl + Y` (Windows/Linux) / `Cmd + Delete` (Mac): Delete the current line.
+- `Alt + Enter` (Windows/Linux) / `Option + Enter` (Mac): Show intention actions and quick fixes.
+
+---
+
+* *Refactoring*
+- `Ctrl + Alt + V` (Windows/Linux) / `Cmd + Option + V` (Mac): Extract variable.
+- `Ctrl + Alt + M` (Windows/Linux) / `Cmd + Option + M` (Mac): Extract method.
+- `Ctrl + F6` (Windows/Linux) / `Cmd + F6` (Mac): Rename variable, method, or class.
+
+---
+
+* *Navigation Between Tabs*
+- `Ctrl + Tab`: Switch between open files.
+- `Ctrl + Shift + [ / ]` (Windows/Linux) / `Cmd + Shift + [ / ]` (Mac): Navigate to the previous or next tab.
+
+---
+
+* *Search and Replace*
+- `Ctrl + F` (Windows/Linux) / `Cmd + F` (Mac): Find in file.
+- `Ctrl + R` (Windows/Linux) / `Cmd + R` (Mac): Replace in file.
+- `Ctrl + Shift + F` (Windows/Linux) / `Cmd + Shift + F` (Mac): Find in project.
+- `Ctrl + Shift + R` (Windows/Linux) / `Cmd + Shift + R` (Mac): Replace in project.
+
+---
+
+* *Version Control*
+- `Ctrl + K` (Windows/Linux) / `Cmd + K` (Mac): Commit changes to VCS.
+- `Ctrl + T` (Windows/Linux) / `Cmd + T` (Mac): Update project from VCS.
+
+---
+
+* *Running and Debugging*
+- `Shift + F10` (Windows/Linux) / `Cmd + R` (Mac): Run the application.
+- `Shift + F9` (Windows/Linux) / `Cmd + D` (Mac): Debug the application.
+- `F8`: Step over during debugging.
+- `F7`: Step into during debugging.
+
+These shortcuts will help streamline your workflow in IntelliJ IDEA, especially if you're new to the IDE.
+
+== Visual Studio Code
+
+Here’s a list of essential Visual Studio Code (VS Code) shortcuts that will improve your productivity as a Java developer:
+
+* *Basic Navigation*
+- `Ctrl + P` (Windows/Linux) / `Cmd + P` (Mac): Quick file navigation by name.
+- `Ctrl + Shift + O` (Windows/Linux) / `Cmd + Shift + O` (Mac): Go to symbol in the file.
+- `Ctrl + G` (Windows/Linux) / `Cmd + G` (Mac): Go to a specific line number.
+- `Ctrl + B` (Windows/Linux/Mac): Toggle the sidebar visibility.
+
+---
+
+* *Code Editing*
+- `Ctrl + Space` (Windows/Linux) / `Cmd + Space` (Mac): Trigger suggestions (code completion).
+- `Ctrl + D` (Windows/Linux) / `Cmd + D` (Mac): Select the next occurrence of the current selection.
+- `Alt + Up/Down Arrow` (Windows/Linux) / `Option + Up/Down Arrow` (Mac): Move the current line or selection up/down.
+- `Ctrl + /` (Windows/Linux) / `Cmd + /` (Mac): Toggle line comment.
+- `Ctrl + Shift + A` (Windows/Linux) / `Cmd + Shift + A` (Mac): Add block comment.
+- `Ctrl + Shift + K` (Windows/Linux) / `Cmd + Shift + K` (Mac): Delete the current line.
+- `Ctrl + Enter` (Windows/Linux) / `Cmd + Enter` (Mac): Insert line below without moving the cursor.
+- `Ctrl + Shift + Enter` (Windows/Linux) / `Cmd + Shift + Enter` (Mac): Insert line above without moving the cursor.
+
+---
+
+* *Code Navigation*
+- `F12`: Go to the definition of the symbol under the cursor.
+- `Alt + F12` (Windows/Linux) / `Cmd + Option + F12` (Mac): Peek definition in a popup.
+- `Ctrl + Shift + F` (Windows/Linux) / `Cmd + Shift + F` (Mac): Global search across the project.
+- `Ctrl + T` (Windows/Linux) / `Cmd + T` (Mac): Go to symbol across all files.
+
+---
+
+* *Refactoring*
+- `F2`: Rename the symbol under the cursor.
+- `Ctrl + Shift + R` (Windows/Linux) / `Cmd + Shift + R` (Mac): Refactor or rename.
+
+---
+
+* *File and Folder Management*
+- `Ctrl + N` (Windows/Linux) / `Cmd + N` (Mac): New file.
+- `Ctrl + Shift + N` (Windows/Linux) / `Cmd + Shift + N` (Mac): Open a new VS Code window.
+- `Ctrl + W` (Windows/Linux) / `Cmd + W` (Mac): Close the current file.
+- `Ctrl + K, Ctrl + S` (Windows/Linux) / `Cmd + K, Cmd + S` (Mac): Open keyboard shortcuts settings.
+
+---
+
+* *Running and Debugging*
+- `F5`: Start debugging.
+- `Shift + F5`: Stop debugging.
+- `F10`: Step over during debugging.
+- `F11`: Step into during debugging.
+- `Ctrl + Shift + D` (Windows/Linux) / `Cmd + Shift + D` (Mac): Open the debug view.
+
+---
+
+* *Search and Replace*
+- `Ctrl + F` (Windows/Linux) / `Cmd + F` (Mac): Find in the current file.
+- `Ctrl + H` (Windows/Linux) / `Cmd + Option + F` (Mac): Replace in the current file.
+- `Ctrl + Shift + F` (Windows/Linux) / `Cmd + Shift + F` (Mac): Find across files in the project.
+- `Ctrl + Shift + H` (Windows/Linux) / `Cmd + Shift + H` (Mac): Replace across files in the project.
+
+---
+
+* *Terminal*
+- `Ctrl + `` (backtick)` (Windows/Linux/Mac): Toggle terminal window.
+- `Ctrl + Shift + `` (backtick)` (Windows/Linux/Mac): Open a new terminal.
+
+---
+
+* *Multiple Cursors*
+- `Alt + Click` (Windows/Linux) / `Cmd + Click` (Mac): Insert multiple cursors at different locations.
+- `Ctrl + Alt + Down/Up` (Windows/Linux) / `Cmd + Option + Down/Up` (Mac): Add cursor above/below the current line.
+
+---
+
+* *Version Control (Git)*
+- `Ctrl + Shift + G` (Windows/Linux) / `Cmd + Shift + G` (Mac): Open the Git view.
+- `Ctrl + K, Ctrl + G` (Windows/Linux) / `Cmd + K, Cmd + G` (Mac): Commit changes.
+
+These shortcuts will help streamline your workflow in VS Code, making coding and navigating easier.
