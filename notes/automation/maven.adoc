@@ -23,7 +23,14 @@
 3. Add the `bin` directory of the extracted folder to the system's `PATH` environment variable.
 4. Verify the installation by running `mvn -v` in the command line.
 
+
 ## 3. Maven Project Structure
+
+*Creating Maven Project*
+
+`mvn archetype:generate -DgroupId=com.example -DartifactId=my-java-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+`
+
 **Standard Directory Layout**
 ```
 my-app
