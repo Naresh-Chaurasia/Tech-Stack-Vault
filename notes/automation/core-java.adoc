@@ -1607,6 +1607,23 @@ The answer is B
 
 ##############################################
 
+Yes, this concept is known as **method chaining**.
+
+*Method Chaining*:
+
+*Method chaining* is a programming pattern where multiple methods are called in a single statement, one after another, with each method returning an object (often the same object or a related one) that allows the next method in the chain to be called.
+
+In your example:
+
+- *`ClassA`'s methodA returns ClassB*, allowing you to call `methodB` from *ClassB*.
+- *`ClassB`'s methodB returns ClassC*, allowing you to call `methodC` from *ClassC*.
+
+This pattern is commonly used in many frameworks and libraries, such as:
+- *Builders* (e.g., `StringBuilder` or fluent APIs in Java)
+- *JPA* Criteria API
+- *Streams* in Java 8+
+
+It is also widely seen in JavaScript libraries (e.g., jQuery), and object-oriented programming languages like Python, Ruby, etc.
 
 ##############################################
 
