@@ -2299,6 +2299,74 @@ class Employee {
 
 - **Instance Variables and Methods:** The instance variable `name` and the method `showEmployeeDetails()` are non-static, so they are accessed through instances of the class (`e1` and `e2`).
 
+
+##########
+
+---
+
+*What is Static import in Java*
+
+*Static import* in Java allows you to import static members (fields and methods) of a class so that they can be accessed directly without qualifying them with the class name. This can make your code cleaner and more readable when using many static members of a class.
+
+[source, java]
+----
+import static java.lang.Math.*; // Static import for Math class methods
+
+public class Main {
+    public static void main(String[] args) {
+        // Using static methods from Math without class reference
+        double result = sqrt(16); // Instead of Math.sqrt(16)
+        System.out.println("Square root of 16 is: " + result);
+
+        double circleArea = PI * pow(5, 2); // Instead of Math.PI and Math.pow
+        System.out.println("Area of the circle is: " + circleArea);
+    }
+}
+----
+
+In the example above, `import static java.lang.Math.*;` allows methods like `sqrt` and fields like `PI` to be used without prefixing them with `Math.`
+
+
+##########
+
+---
+
+
+[source, java]
+----
+import static CustomMathUtil.*; // Static import for CustomMathUtil methods
+
+public class Main {
+    public static void main(String[] args) {
+        // Using static methods from CustomMathUtil without class reference
+        int sum = add(5, 10); // Instead of CustomMathUtil.add(5, 10)
+        System.out.println("Sum: " + sum);
+
+        int product = multiply(3, 7); // Instead of CustomMathUtil.multiply(3, 7)
+        System.out.println("Product: " + product);
+    }
+}
+
+// Custom utility class with static methods
+class CustomMathUtil {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+}
+----
+
+In this example, the `CustomMathUtil` class contains static methods `add` and `multiply`. By using `import static CustomMathUtil.*;`, we can access these methods directly (e.g., `add(5, 10)`) without referring to the class name `CustomMathUtil`. This simplifies the code when frequently calling static methods from the same class.
+
+
+##########
+
+---
+
+
 === Question Set (Static)
 
 * *Which of the following is true about static methods in Java?*
