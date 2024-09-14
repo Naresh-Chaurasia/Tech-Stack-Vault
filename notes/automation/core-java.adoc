@@ -1607,23 +1607,66 @@ The answer is B
 
 ##############################################
 
-Yes, this concept is known as **method chaining**.
+Here's a Java program where each method returns an object of the class it belongs to, and the methods are called sequentially in the `main` method:
 
-*Method Chaining*:
+```java
+// ClassA.java
+public class ClassA {
+    public ClassB methodA() {
+        System.out.println("Method A in ClassA is called.");
+        // Returning an instance of ClassB
+        return new ClassB();
+    }
+}
 
-*Method chaining* is a programming pattern where multiple methods are called in a single statement, one after another, with each method returning an object (often the same object or a related one) that allows the next method in the chain to be called.
+// ClassB.java
+public class ClassB {
+    public ClassC methodB() {
+        System.out.println("Method B in ClassB is called.");
+        // Returning an instance of ClassC
+        return new ClassC();
+    }
+}
 
-In your example:
+// ClassC.java
+public class ClassC {
+    public ClassC methodC() {
+        System.out.println("Method C in ClassC is called.");
+        // Returning itself
+        return this;
+    }
+}
 
-- *`ClassA`'s methodA returns ClassB*, allowing you to call `methodB` from *ClassB*.
-- *`ClassB`'s methodB returns ClassC*, allowing you to call `methodC` from *ClassC*.
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of ClassA and call the chain of methods
+        ClassA classA = new ClassA();
+        ClassB classB = classA.methodA(); // Calls methodA from ClassA and gets ClassB object
+        ClassC classC = classB.methodB(); // Calls methodB from ClassB and gets ClassC object
+        classC.methodC();                 // Calls methodC from ClassC
+    }
+}
+```
 
-This pattern is commonly used in many frameworks and libraries, such as:
-- *Builders* (e.g., `StringBuilder` or fluent APIs in Java)
-- *JPA* Criteria API
-- *Streams* in Java 8+
+### Explanation:
 
-It is also widely seen in JavaScript libraries (e.g., jQuery), and object-oriented programming languages like Python, Ruby, etc.
+1. **ClassA**'s `methodA` returns an object of **ClassB**.
+2. **ClassB**'s `methodB` returns an object of **ClassC**.
+3. **ClassC**'s `methodC` returns itself, which is of type **ClassC**.
+4. In the `main` method:
+- An object of **ClassA** is created, and `methodA` is called, returning an object of **ClassB**.
+- The returned **ClassB** object is used to call `methodB`, which returns an object of **ClassC**.
+- Finally, `methodC` is called on the **ClassC** object.
+
+### Output:
+```
+Method A in ClassA is called.
+Method B in ClassB is called.
+Method C in ClassC is called.
+```
+
+This demonstrates method chaining where each method returns an object of another class, and the methods are called one after the other in the `main` method.
 
 ##############################################
 
