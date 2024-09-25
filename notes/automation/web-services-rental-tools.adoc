@@ -40,9 +40,13 @@ Returns the status of the API.
 
 === Get all tools
 
+
+
 `GET /tools`
 
 Returns a list of tools from the inventory.
+
+#Query Parameters can be option and Mandatory#
 
 [cols="3,2,1,4", options="header"]
 |===
