@@ -46,7 +46,7 @@ Returns the status of the API.
 
 Returns a list of tools from the inventory.
 
-#Query Parameters can be option and Mandatory#
+#Query Parameters can be optional and Mandatory#
 
 [cols="3,2,1,4", options="header"]
 |===
