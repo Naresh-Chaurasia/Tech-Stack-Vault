@@ -1,0 +1,204 @@
+= Postman Q & A
+:toc: right
+:toclevels: 5
+:sectnums: 5
+
+
+== Postman Script
+
+*Basic Status Code Check*
+
+This script checks if the response status code is `200 OK`.
+
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+
+*Validate Response Body (JSON)*
+
+This script verifies that the response contains a specific value in the JSON response body.
+
+```javascript
+pm.test("Response contains user ID", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.id).to.eql(1);
+});
+```
+
+*Check Content-Type Header*
+
+This script checks if the response has the correct `Content-Type` header (e.g., `application/json`).
+
+```javascript
+pm.test("Content-Type is application/json", function () {
+    pm.response.to.have.header("Content-Type", "application/json");
+});
+```
+
+*Check Response Time*
+
+This script ensures that the response time is within a specified limit (e.g., 500ms).
+
+```javascript
+pm.test("Response time is less than 500ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(500);
+});
+```
+
+*Validate Array Length*
+
+This script validates that a response contains an array of users with a specific length.
+
+```javascript
+pm.test("Users array has 10 users", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.users.length).to.eql(10);
+});
+```
+
+*Set Environment Variable from Response
+
+This script extracts a value from the response and sets it as an environment variable for use in future requests.
+
+```javascript
+var jsonData = pm.response.json();
+pm.environment.set("user_id", jsonData.id);
+```
+
+*Check Response for a Specific Field (Dynamic Validation)
+
+This script checks if a particular field exists in the response.
+
+```javascript
+pm.test("Check if email exists in response", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("email");
+});
+```
+
+*Validate Status Code and Response Body Together
+
+This script validates both the status code and the response body.
+
+```javascript
+pm.test("Status code is 201 and user is created", function () {
+    pm.response.to.have.status(201);
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.eql("John Doe");
+});
+```
+
+*Test for Error Response
+
+This script tests that the response returns a 404 error with the correct message.
+
+```javascript
+pm.test("Error: 404 Not Found", function () {
+    pm.response.to.have.status(404);
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.message).to.eql("User not found");
+});
+```
+
+*Loop Through Array in Response
+
+This script loops through an array in the JSON response and verifies that each item contains a specific field.
+
+```javascript
+var jsonData = pm.response.json();
+jsonData.users.forEach(function (user) {
+    pm.test("User has an ID", function () {
+        pm.expect(user).to.have.property("id");
+    });
+});
+```
+
+*Check for Empty Response
+
+This script checks if the response body is empty.
+
+```javascript
+pm.test("Response body is empty", function () {
+    pm.expect(pm.response.text()).to.eql("");
+});
+```
+
+*Chaining Requests
+
+This script sets data from one request to be used in the next request, simulating the chaining of requests.
+
+```javascript
+// Set value from first request to use in the next
+pm.environment.set("auth_token", pm.response.json().token);
+```
+
+These Postman test scripts can be used to automate API validation and create a robust API testing workflow.
+
+== Postman Q&A
+
+*GET Request
+
+How can you send a `GET` request to retrieve a list of all users from the API?
+*Example endpoint*: `/users`
+
+*POST Request
+
+How do you create a new user using a `POST` request, and what data needs to be included in the body?
+*Example endpoint*: `/users`
+*Example body*:
+```json
+{
+"name": "John Doe",
+"email": "johndoe@example.com"
+}
+```
+
+*PUT Request
+
+How can you update the email of an existing user using a `PUT` request?
+*Example endpoint*: `/users/{id}`
+*Example body*:
+```json
+{
+"email": "newemail@example.com"
+}
+```
+
+*DELETE Request
+
+How do you delete a user by their ID using a `DELETE` request?
+*Example endpoint*: `/users/{id}`
+
+*Authentication
+
+How do you send a request with Bearer Token authentication to retrieve the profile of the authenticated user?
+*Example endpoint*: `/profile`
+
+*Query Parameters
+
+How can you use query parameters in a `GET` request to filter users by their status (e.g., active)?
+*Example endpoint*: `/users?status=active`
+
+*Headers
+
+How do you add custom headers (e.g., `X-API-Key`) to a request?
+*Example use case*: Include an API key in the header for authentication.
+*Header*:
+
+```
+X-API-Key: your_api_key
+```
+
+*Response Validation
+
+How can you validate the response status code is `200 OK` after sending a `GET` request to `/users`? What happens if the status code is `404`?
+
+*Environment Variables
+
+How can you create an environment in Postman to switch between different API base URLs (e.g., development, staging, production) for the same API requests?
+
+*Error Handling
+
+How do you handle and test for an error response when you try to create a new user without the required `name` field? What should the response code and message be?
