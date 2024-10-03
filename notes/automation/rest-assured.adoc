@@ -4,6 +4,19 @@
 :sectnums: 5
 
 
+== What is JAR file
+
+A JAR (Java ARchive) file is a package file format used to aggregate multiple Java class files, libraries, resources, and metadata into a single file for distribution. It is essentially a compressed (ZIP) archive that allows Java applications or libraries to be easily deployed and shared.
+
+JAR files are commonly used for:
+
+* Packaging Java applications for distribution, making them easy to execute with `java -jar filename.jar`.
+* Bundling libraries (JARs) for reuse across different projects.
+* Compressing files and directories to reduce their size and improve distribution speed.
+
+JAR files often include a `META-INF` directory, which contains metadata and a `MANIFEST.MF` file that can specify entry points and other configuration information.
+
+
 == References
 
 * https://www.javadoc.io/static/io.rest-assured/rest-assured/5.5.0/index.html?io/restassured/RestAssured.html

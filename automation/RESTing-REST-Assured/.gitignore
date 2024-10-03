@@ -1,0 +1,44 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Maven / Gradle directories
+target/
+build/
+
+# Eclipse / IntelliJ IDEA project files
+*.iml
+.idea/
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# VS Code files
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Generated files
+*.generated
+
+# Thumbnails
+._*
+
+# Temporary files
+tmp/

@@ -1,18 +1,15 @@
-package com.chaitali;
+package com.chaitali.p1;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.*;
 
-public class RestAssuredExample {
+public class RestAssured2 {
     public static void main(String[] args) {
-        // Set the base URI for the API
-        RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
-
         // Perform a GET request to fetch users
         Response response = given()
                 .when()
-                .get("/users")
+                .get("https://jsonplaceholder.typicode.com/users")
                 .then()
                 .statusCode(200) // Assert that status code is 200 (OK)
                 .extract()
