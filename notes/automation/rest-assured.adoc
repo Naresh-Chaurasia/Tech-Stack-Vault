@@ -8,16 +8,315 @@
 
 A JAR (Java ARchive) file is a package file format used to aggregate multiple Java class files, libraries, resources, and metadata into a single file for distribution. It is essentially a compressed (ZIP) archive that allows Java applications or libraries to be easily deployed and shared.
 
-JAR files are commonly used for:
 
-* Packaging Java applications for distribution, making them easy to execute with `java -jar filename.jar`.
-* Bundling libraries (JARs) for reuse across different projects.
-* Compressing files and directories to reduce their size and improve distribution speed.
 
-JAR files often include a `META-INF` directory, which contains metadata and a `MANIFEST.MF` file that can specify entry points and other configuration information.
+##########
 
+Here are detailed notes on *Rest Assured API Automation* that you can use for teaching your students. I've structured it with the basics and practical examples to make it easier to follow for beginners.
+
+----
+
+= Rest Assured API Automation Notes =
+
+Rest Assured is a powerful Java library that allows you to automate testing of REST APIs. It provides an easy-to-use DSL (Domain Specific Language) that simplifies API testing.
+
+*Key Features of Rest Assured:*
+* Supports all HTTP methods (GET, POST, PUT, DELETE, PATCH)
+* Handles request and response body in JSON, XML, and other formats
+* Built-in support for authentication mechanisms (Basic, OAuth, etc.)
+* Easy integration with JUnit and TestNG
+* Supports both BDD (Behavior Driven Development) and non-BDD approaches
+
+----
+
+== Setting Up Rest Assured
+
+To begin using Rest Assured in your project, you need to add the required dependencies to your `pom.xml` (for Maven) .
+
+=== Maven Dependency ===
+
+[source,xml]
+----
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.3.0</version>
+    <scope>test</scope>
+</dependency>
+----
+
+=== Basic Rest Assured Example
+
+Here’s a simple example to demonstrate how to make a GET request using Rest Assured.
+
+[source,java]
+----
+import io.restassured.RestAssured;
+
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+public class APITest {
+    public static void main(String[] args) {
+        // Base URI of the API
+        RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
+
+        // Simple GET Request and Assertion
+        given().
+            header("Content-Type", "application/json").
+        when().
+            get("/posts/1").
+        then().
+            statusCode(200).
+            body("userId", equalTo(1)).
+            body("title", containsString("sunt aut facere"));
+    }
+}
+----
+
+*Explanation:*
+
+* `baseURI`: Sets the base URI of the API endpoint.
+* `given()`: Prepares the request by setting up headers, query parameters, etc.
+* `when()`: Executes the HTTP method (GET, POST, PUT, DELETE).
+* `then()`: Validates the response, status code, or response body.
+
+=== Common HTTP Methods
+
+*GET Method*
+
+*GET* requests are used to retrieve data from a server. Here is how to automate a simple GET request.
+
+[source,java]
+----
+given().
+    when().
+        get("https://jsonplaceholder.typicode.com/posts").
+    then().
+        statusCode(200).
+        body("[0].id", equalTo(1)); // Checks the first item's ID
+----
+
+*POST Method*
+
+*POST* requests are used to send data to the server. Below is how to send a POST request with a JSON payload.
+
+[source,java]
+----
+given().
+    header("Content-Type", "application/json").
+    body("{ \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1 }").
+when().
+    post("https://jsonplaceholder.typicode.com/posts").
+then().
+    statusCode(201).  // Verifies if the status code is 201 (Created)
+    body("title", equalTo("foo"));
+----
+
+*PUT Method*
+
+*PUT* requests are used to update data. The following example shows how to update an existing resource.
+
+[source,java]
+----
+given().
+    header("Content-Type", "application/json").
+    body("{ \"id\": 1, \"title\": \"updated title\", \"body\": \"updated body\", \"userId\": 1 }").
+when().
+    put("https://jsonplaceholder.typicode.com/posts/1").
+then().
+    statusCode(200).  // Status code for a successful update
+    body("title", equalTo("updated title"));
+----
+
+*DELETE Method*
+
+*DELETE* requests are used to remove a resource. Here's how to automate a DELETE request.
+
+[source,java]
+----
+when().
+    delete("https://jsonplaceholder.typicode.com/posts/1").
+then().
+    statusCode(200);  // Verifies if the delete operation is successful
+----
+
+== Advanced Topics ==
+
+=== Response Validation ===
+
+Rest Assured makes it easy to validate API responses using various matchers from the *Hamcrest* library.
+
+*Response Validation Example:*
+
+[source,java]
+----
+given().
+    when().
+        get("https://jsonplaceholder.typicode.com/posts/1").
+    then().
+        statusCode(200).
+        body("userId", equalTo(1)).
+        body("title", containsString("sunt aut facere"));
+----
+
+You can also validate multiple fields at once, and Rest Assured supports JSON path expressions for deeper validation:
+
+[source,java]
+----
+given().
+    when().
+        get("https://jsonplaceholder.typicode.com/posts").
+    then().
+        body("id", hasItems(1, 2, 3));  // Check if multiple IDs are present
+----
+
+=== Authentication ===
+
+Rest Assured provides built-in support for different authentication mechanisms like Basic Authentication, OAuth 2.0, etc.
+
+*Basic Authentication Example:*
+
+[source,java]
+----
+given().
+    auth().
+    basic("username", "password").
+when().
+    get("https://api.example.com/secure-endpoint").
+then().
+    statusCode(200);
+----
+
+*OAuth2 Example:*
+
+[source,java]
+----
+given().
+    auth().
+    oauth2("your-access-token").
+when().
+    get("https://api.example.com/protected-endpoint").
+then().
+    statusCode(200);
+----
+
+=== Query Parameters and Path Parameters ===
+
+Rest Assured makes it easy to pass query parameters and path parameters in requests.
+
+*Query Parameters Example:*
+
+[source,java]
+----
+given().
+    queryParam("userId", 1).
+when().
+    get("https://jsonplaceholder.typicode.com/posts").
+then().
+    statusCode(200).
+    body("[0].userId", equalTo(1));
+----
+
+*Path Parameters Example:*
+
+[source,java]
+----
+given().
+    pathParam("id", 1).
+when().
+    get("https://jsonplaceholder.typicode.com/posts/{id}").
+then().
+    statusCode(200).
+    body("id", equalTo(1));
+----
+
+=== Logging Requests and Responses ===
+
+You can log requests and responses for better visibility during test execution.
+
+[source,java]
+----
+given().
+    log().all(). // Log the request
+when().
+    get("https://jsonplaceholder.typicode.com/posts").
+then().
+    log().body();  // Log the response body
+----
+
+=== Exception Handling ===
+
+You can add custom error handling or assertions to manage cases when API responses don’t meet expectations.
+
+[source,java]
+----
+try {
+    given().
+        when().
+        get("https://jsonplaceholder.typicode.com/posts/1").
+    then().
+        statusCode(404);  // Expecting a 404 error for non-existing endpoint
+} catch (AssertionError e) {
+    System.out.println("Assertion failed: " + e.getMessage());
+}
+----
+
+== Integrating Rest Assured with TestNG ==
+
+Rest Assured works seamlessly with *TestNG*, which allows you to structure your tests and take advantage of TestNG’s reporting and assertions.
+
+*TestNG Example:*
+
+[source,java]
+----
+import io.restassured.RestAssured;
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+public class APITestWithTestNG {
+
+    @Test
+    public void testGetPost() {
+        RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
+
+        given().
+        when().
+            get("/posts/1").
+        then().
+            statusCode(200).
+            body("userId", equalTo(1)).
+            body("title", containsString("sunt aut facere"));
+    }
+}
+----
+
+######
+
+== Faker
+
+* https://github.com/DiUS/java-faker
+
+######
 
 == References
+
+* https://jsonviewer.stack.hu/
+** Remove White Space
+
+----
+{
+    "firstName": "Vernon1",
+    "lastName": "Harper1",
+    "email": "egestas1.rhoncus.Proin@gmail.com",
+    "programme": "Financial Analysis",
+    "courses": [
+      "Accounting",
+      "Statistics"
+    ]
+}
+----
 
 * https://www.javadoc.io/static/io.rest-assured/rest-assured/5.5.0/index.html?io/restassured/RestAssured.html
 * https://www.javadoc.io/static/io.rest-assured/rest-assured/5.5.0/io/restassured/response/ResponseBody.html
