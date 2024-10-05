@@ -8,7 +8,7 @@ import io.restassured.response.Response;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RestAssured8_POST_Pojo {
+public class RestAssured4_POST_Pojo {
     public static void main(String[] args) {
 
         com.studentapp.model.StudentPojo student = new StudentPojo();

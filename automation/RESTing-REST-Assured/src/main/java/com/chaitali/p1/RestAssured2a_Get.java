@@ -5,7 +5,7 @@ import io.restassured.response.ValidatableResponse;
 
 import static io.restassured.RestAssured.given;
 
-public class RestAssured3 {
+public class RestAssured2a_Get {
     public static void main(String[] args) {
         // Set the base URI for the API
         //RestAssured.baseURI = "https://jsonplaceholder.typicode.com";

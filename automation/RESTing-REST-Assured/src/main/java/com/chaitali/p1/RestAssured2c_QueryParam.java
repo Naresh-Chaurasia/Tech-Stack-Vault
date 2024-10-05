@@ -7,7 +7,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class RestAssured5_QueryParam {
+public class RestAssured2c_QueryParam {
 
     //http://localhost:8080/student/list?programme=Computer%20Science
     //http://localhost:8080/student/list?programme=Computer%20Science&limit=1

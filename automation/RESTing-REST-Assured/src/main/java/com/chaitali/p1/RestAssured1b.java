@@ -1,10 +1,9 @@
 package com.chaitali.p1;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.*;
 
-public class RestAssured2 {
+public class RestAssured1b {
     public static void main(String[] args) {
         // Perform a GET request to fetch users
         Response response = given()

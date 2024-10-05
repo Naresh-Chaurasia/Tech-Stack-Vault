@@ -8,7 +8,7 @@ import io.restassured.response.Response;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RestAssured8_POST_Pojo_faker {
+public class RestAssured5_PUT_Pojo {
     public static void main(String[] args) {
 
         StudentPojo student = new StudentPojo();
@@ -25,7 +25,17 @@ public class RestAssured8_POST_Pojo_faker {
         student.setProgramme("Computer Science");
         student.setCourses(courses);
 
-        System.out.println(student.getFirstName());
+        // Sending POST request
+        Response response = RestAssured
+                .given()
+                .header("Content-Type", "application/json")
+                .body(student) // Setting the body
+                .when()
+                .put("http://localhost:8080/student/1")  // API endpoint
+                .then()
+                .extract().response();
 
+        System.out.println("Status Code: " + response.getStatusCode());
+        System.out.println("Response Body: " + response.getBody().asString());
     }
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class RestAssured7_PathParam {
+public class RestAssured2d_PathParam {
 
     //http://localhost:8080/student/2
     public static void main(String[] args) {

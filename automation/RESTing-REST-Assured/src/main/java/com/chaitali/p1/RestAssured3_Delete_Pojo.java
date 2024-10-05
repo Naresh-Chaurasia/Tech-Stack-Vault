@@ -1,14 +1,9 @@
 package com.chaitali.p1;
 
-import com.github.javafaker.Faker;
-import com.studentapp.model.StudentPojo;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class RestAssured8_Delete_Pojo {
+public class RestAssured3_Delete_Pojo {
     public static void main(String[] args) {
 
         // Sending POST request

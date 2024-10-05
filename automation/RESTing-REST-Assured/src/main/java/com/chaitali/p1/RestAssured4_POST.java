@@ -3,7 +3,7 @@ package com.chaitali.p1;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class RestAssured8_POST {
+public class RestAssured4_POST {
     public static void main(String[] args) {
 
         String requestBody= "{\"firstName\":\"Vernon1\",\"lastName\":\"Harper1\",\"email\":\"egestas1.rhoncus.Proin@gmail.com\",\"programme\":\"Financial Analysis\",\"courses\":[\"Accounting\",\"Statistics\"]}";
