@@ -3,7 +3,7 @@ package com.chaitali.p1;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 
-import static io.restassured.RestAssured.given;
+import  io.restassured.*;
 
 public class RestAssured2a_Get {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class RestAssured2a_Get {
         //RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
         // Perform a GET request to fetch users
-        Response response = given()
+        Response response = RestAssured.given()
                 .when()
                 .get("http://localhost:8080/student/list");
 

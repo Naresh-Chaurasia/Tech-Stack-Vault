@@ -19,9 +19,6 @@ public class RestAssured2b_QueryParam {
 
         Response response =
                 given()
-                        //.queryParam("programme", "Computer Science")
-                        //.queryParam("limit", 1)
-                        //.queryParams("programme", "Computer Science", "limit", 1)
                         .queryParams(params)
                         .when()
                         .get("http://localhost:8080/student/list");
