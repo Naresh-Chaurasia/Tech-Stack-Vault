@@ -15,7 +15,8 @@ public class RestAssured2c_QueryParam {
 
         Response response =
                 given()
-                        .queryParams("programme", "Computer Science","limit", "1")
+                        .queryParams("programme", "Computer Science")
+                        .queryParams("limit", "1")
                         .when()
                         .get("http://localhost:8080/student/list");
 

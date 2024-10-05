@@ -11,9 +11,6 @@ public class RestAssured2d_PathParam {
 
     //http://localhost:8080/student/2
     public static void main(String[] args) {
-        Map<String,Object> params =  new HashMap<String, Object>();
-        params.put("programme", "Computer Science");
-        params.put("limit",1);
 
 
         Response response =
